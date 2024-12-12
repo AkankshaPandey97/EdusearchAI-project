@@ -1,0 +1,19 @@
+services:
+  airflow-webserver:
+    deploy:
+      resources:
+        limits:
+          memory: 2g
+          cpus: "1.5"
+  airflow-scheduler:
+    deploy:
+      resources:
+        limits:
+          memory: 3g
+          cpus: "2.0"
+  airflow-worker:
+    deploy:
+      resources:
+        limits:
+          memory: 3g
+          cpus: "2.5"
