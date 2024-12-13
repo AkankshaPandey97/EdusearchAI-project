@@ -117,11 +117,11 @@ docker-compose up --build
 | Name                        | Contribution % | Contributions                                                                                   |
 |---------------------------- |----------------|-------------------------------------------------------------------------------------------------|
 | Sai Pranavi Jeedigunta      | 33%            | Web scraping, Materials Docling Processing, Bigquery and Pinecone db setup, Airflow Automation  |
-| Akanksha Pandey             | 33%            | Backend APIs, RAG - Q&A feature, Topic segmentation, Summarization, Research notes              |
-| Kalash Desai                | 33%            | Streamlit frontend, Deployment                                                                  |
+| Akanksha Pandey             | 33%            | RAG - Q&A feature, Topic segmentation, Summarization, Citations                                 |
+| Kalash Desai                | 33%            | Streamlit frontend, Deployment, Youtube API                                                     |
 
 ---
 
 ## Attestation
-> We attest that we have not used any other students’ work in our assignment and abide by the policies listed in the student handbook.
+> We attest that we have not used any other student’s work in our assignment and abide by the policies listed in the student handbook.
 
