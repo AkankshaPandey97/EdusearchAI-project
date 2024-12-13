@@ -108,7 +108,7 @@ docker-compose up --build
 ---
 
 ## Submission Links
-- **Demo Video**: [EduSearch AI Demo](https://example.com/demo-video)
+- **Demo Video**: Included in the Codelabs document
 - **Codelabs Document**: [EduSearch AI codelabs](https://codelabs-preview.appspot.com/?file_id=https://docs.google.com/document/d/1L5xWheCcbq-f3ljnYXbzXES9jQn3k6B6qqA5KcuUzMY/edit?usp=sharing#0)
 
 ---
