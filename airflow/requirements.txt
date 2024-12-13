@@ -1,0 +1,15 @@
+requests
+beautifulsoup4
+yt-dlp
+selenium
+google-cloud-storage
+python-dotenv
+google-cloud-bigquery
+pandas
+pyarrow
+docling
+pinecone-client
+sentence-transformers
+pytesseract
+apache-airflow
+PyPDF2
