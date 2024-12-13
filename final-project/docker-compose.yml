@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  backend:
+    build: 
+      context: ./BDIA-final Project
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - GOOGLE_APPLICATION_CREDENTIALS=/app/finalproject-442400-ff1f8be678f0.json
+      - BIGQUERY_PROJECT_ID=${BIGQUERY_PROJECT_ID}
+      - BIGQUERY_DATASET=${BIGQUERY_DATASET}
+      - BIGQUERY_TABLE=${BIGQUERY_TABLE}
+      - PINECONE_API_KEY=${PINECONE_API_KEY}
+      - PINECONE_INDEX_NAME=${PINECONE_INDEX_NAME}
+      - PINECONE_ENVIRONMENT=${PINECONE_ENVIRONMENT}
+      - YOUTUBE_API_KEY=${YOUTUBE_API_KEY}
+    volumes:
+      - ./BDIA-final Project:/app
+      - ./.env:/app/.env
+
+  frontend:
+    build:
+      context: ./EduSearch
+      dockerfile: Dockerfile
+    ports:
+      - "8501:8501"
+    environment:
+      - BACKEND_URL=http://backend:8000
+      - YOUTUBE_API_KEY=${YOUTUBE_API_KEY}
+    depends_on:
+      - backend
+    volumes:
+      - ./EduSearch:/app
+      - ./.env:/app/.env 

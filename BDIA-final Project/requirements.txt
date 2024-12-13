@@ -15,3 +15,6 @@ langsmith
 langchain-core
 langchain-openai
 langgraph>=0.0.10
+google-cloud-bigquery
+google-api-python-client
+requests
