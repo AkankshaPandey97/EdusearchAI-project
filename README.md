@@ -44,7 +44,7 @@ EduSearch AI will process 5 complete MIT OCW courses and their corresponding You
 ---
 
 ## Architecture Diagram
-![Architecture Diagram](architecture-diagram/architecture_diagram.png)
+![Architecture Diagram](architecture-diagram/edusearch_ai.png)
 
 ---
 
