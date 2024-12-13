@@ -14,6 +14,12 @@ class WorkflowState(TypedDict):
 class BaseWorkflow:
     def __init__(self):
         self.graph = StateGraph(WorkflowState)
+        self.state = {
+            "context": {},
+            "results": [],
+            "errors": [],
+            "context_metrics": {}
+        }
         self.recovery_handlers = {}
         self.state_manager = StateManager()
         self.context_manager = ContextWindowManager()

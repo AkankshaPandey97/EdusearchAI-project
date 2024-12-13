@@ -1,6 +1,10 @@
 import streamlit as st
 from google.cloud import bigquery
-
+import asyncio
+import aiohttp
+from config.api_config import ENDPOINTS
+from utils.api_client import APIClient
+from utils.state_management import StateManager
 
 def fetch_playlists():
     """
@@ -47,6 +51,26 @@ def fetch_playlists():
                 "instructors": row.instructors or "N/A",
                 "topics": topic_details,
             })
+        
+        # Enrich with API data
+        async def enrich_with_api_data():
+            try:
+                async with aiohttp.ClientSession() as session:
+                    async with session.get(f"{ENDPOINTS['playlists']}/metadata") as response:
+                        if response.status == 200:
+                            api_data = await response.json()
+                            # Merge API data with BigQuery results
+                            for playlist in playlists:
+                                if playlist['playlist_id'] in api_data:
+                                    playlist.update({
+                                        'processed': api_data[playlist['playlist_id']].get('processed', False),
+                                        'last_updated': api_data[playlist['playlist_id']].get('last_updated', None)
+                                    })
+            except Exception as e:
+                st.warning(f"Could not fetch API data: {str(e)}")
+        
+        # Run API enrichment
+        asyncio.run(enrich_with_api_data())
         return playlists
     except Exception as e:
         st.error(f"Error fetching playlists: {e}")
@@ -75,6 +99,7 @@ def show_dashboard(set_active_page):
     st.markdown("<h1 style='text-align: center; color: #4CAF50;'>Welcome to EduSearch AI</h1>", unsafe_allow_html=True)
     st.markdown("<h3 style='text-align: center; color: #9E9E9E;'>Turning YouTube Playlists into Interactive Learning Tools</h3>", unsafe_allow_html=True)
 
+    
     # Introduction Text
     st.markdown(
         """
@@ -132,8 +157,19 @@ def show_dashboard(set_active_page):
                 """, unsafe_allow_html=True
             )
             if st.button(f"Select '{playlist['title']}'", key=f"select_{playlist['playlist_id']}"):
-                # Store the selected playlist_id and title in session state
+                # Store the selected playlist info in session state
                 st.session_state.selected_playlist = playlist["playlist_id"]
                 st.session_state.selected_playlist_title = playlist["title"]
+                
+                # Check if playlist needs processing via API
+                with st.spinner("Checking playlist status..."):
+                    try:
+                        status = asyncio.run(APIClient.get_playlist_status(playlist["playlist_id"]))
+                        if status.get('status') == 'not_processed':
+                            with st.spinner("Initializing playlist processing..."):
+                                asyncio.run(APIClient.process_playlist(playlist["playlist_id"]))
+                    except Exception as e:
+                        st.warning(f"Could not verify playlist status: {str(e)}")
+                
                 # Navigate to the Playlist Page
                 set_active_page("Playlist Page")

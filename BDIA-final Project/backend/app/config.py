@@ -1,10 +1,14 @@
+from typing import Optional
 from pydantic_settings import BaseSettings
 from functools import lru_cache
-from typing import Optional
+import os
 from dotenv import load_dotenv
 
-# Load environment variables from .env file
+# Load environment variables first
 load_dotenv()
+
+# Temporarily remove BigQuery variables from the environment
+#bq_vars = {key: os.environ.pop(key, None) for key in ['BQ_CREDENTIALS', 'BQ_PROJECT_ID', 'BQ_DATASET', 'BQ_TABLE']}
 
 class Settings(BaseSettings):
     # App settings
@@ -12,16 +16,19 @@ class Settings(BaseSettings):
     
     # API Keys
     OPENAI_API_KEY: str
+    PINECONE_INDEX_NAME: str
+    PINECONE_ENVIRONMENT: str
     PINECONE_API_KEY: str
     API_KEY: str
     
-    # Pinecone settings
-    PINECONE_INDEX_NAME: str
-    PINECONE_ENVIRONMENT: str
-    
+    BIGQUERY_PROJECT_ID: Optional[str] = None
+    BIGQUERY_DATASET: Optional[str] = None
+    BIGQUERY_TABLE: Optional[str] = None
+    GOOGLE_APPLICATION_CREDENTIALS: Optional[str] = None
+
     # Model settings
     DEFAULT_MODEL: str = "gpt-4-turbo-preview"
-    MODEL_TEMPERATURE: float = 0.7
+    temperature: float = 0.7
     
     # Context window settings
     MAX_CONTEXT_TOKENS: int = 4000
@@ -40,11 +47,19 @@ class Settings(BaseSettings):
     RATE_LIMIT_PER_MINUTE: int = 60
     BURST_LIMIT: int = 10
     MAX_CONCURRENT: int = 20
+    
+    ENV: str = "development"
 
     class Config:
         env_file = ".env"
         case_sensitive = True
+        protected_namespaces = ('settings_',)  # Resolve namespace conflict
 
 @lru_cache()
 def get_settings() -> Settings:
     return Settings()
+
+# Restore BigQuery variables to environment
+#for key, value in bq_vars.items():
+#    if value is not None:
+#        os.environ[key] = value

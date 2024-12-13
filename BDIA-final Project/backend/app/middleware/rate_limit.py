@@ -118,3 +118,25 @@ class RateLimitMiddleware(BaseHTTPMiddleware):
                 ]
             if not self.requests[ip]:
                 del self.requests[ip]
+    
+    async def _process_queue(self):
+        """Process queued requests"""
+        while True:
+            try:
+                request = await self._request_queue.get()
+                current_time = time.time()
+                
+                # Process cleanup
+                await self._cleanup_old_requests(current_time)
+                
+                self._request_queue.task_done()
+            except Exception as e:
+                error = WorkflowError(
+                    code="QUEUE_PROCESSING_ERROR",
+                    message=str(e),
+                    severity=ErrorSeverity.HIGH,
+                    category=ErrorCategory.SYSTEM,
+                    context={}
+                )
+                await self.state_manager.add_error(error)
+                await asyncio.sleep(1)

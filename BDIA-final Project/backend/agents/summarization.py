@@ -1,4 +1,5 @@
 from typing import List, Dict, Optional, Any
+from google.cloud import bigquery
 from .base import BaseAgent, AgentInput, AgentOutput
 from langchain.prompts import ChatPromptTemplate
 from langchain.output_parsers import PydanticOutputParser
@@ -23,6 +24,42 @@ class SummarizationOutput(AgentOutput):
     error: Optional[WorkflowError] = None
 
 class SummarizationAgent(BaseAgent):
+    def __init__(self):
+        super().__init__()
+        self.client = bigquery.Client()
+
+    async def fetch_course_description(self, course_title: str) -> str:
+        query = """
+        SELECT description
+        FROM `finalproject-442400.coursesdata.Course`
+        WHERE title = @course_title
+        """
+        job_config = bigquery.QueryJobConfig(
+            query_parameters=[
+                bigquery.ScalarQueryParameter("course_title", "STRING", course_title)
+            ]
+        )
+        query_job = self.client.query(query, job_config=job_config)
+        results = query_job.result()
+
+        for row in results:
+            return row.description
+        return "No description available for this course."
+
+    async def summarize(self, course_title: str) -> str:
+        try:
+            description = await self.fetch_course_description(course_title)
+            return description
+        except Exception as e:
+            error = WorkflowError(
+                message=f"Failed to fetch course description: {str(e)}",
+                severity=ErrorSeverity.CRITICAL,
+                category=ErrorCategory.DATA,
+                context={"course_title": course_title}
+            )
+            await self.state_manager.handle_error(error)
+            return "An error occurred while fetching the course description."
+
     def _create_system_prompt(self) -> str:
         return """You are an expert summarization assistant. Your task is to:
         1. Create concise yet comprehensive summaries
@@ -33,76 +70,88 @@ class SummarizationAgent(BaseAgent):
     
     async def _process_implementation(self, input_data: SummarizationInput) -> SummarizationOutput:
         try:
-            # Generate summary using LLM
+            # 1. Get LLM response with proper formatting
             response = await self._execute_with_retry(
                 self.llm.apredict_messages,
                 messages=[
                     ("system", self._create_system_prompt()),
                     ("human", f"""
-                    Content: {input_data.content}
-                    Style: {input_data.style}
-                    Max Length: {input_data.max_length or 'Not specified'}
-                    Include Key Points: {input_data.include_key_points}
+                    Please provide a summary in the following format:
+                    TITLE: [title]
+                    BRIEF: [brief summary]
+                    DETAILED: [detailed summary]
+                    KEY POINTS:
+                    - [point 1]
+                    - [point 2]
+                    ...
                     
-                    Please provide:
-                    1. A title
-                    2. A brief summary (1-2 sentences)
-                    3. A detailed summary
-                    4. Key points (if requested)
+                    Content: {input_data.content}
                     """)
                 ]
             )
             
-            # Process the response into structured format
-            sections = response.split("\n\n")
-            title = sections[0].replace("Title: ", "").strip()
-            brief = sections[1].replace("Brief: ", "").strip()
-            detailed = sections[2].replace("Detailed: ", "").strip()
-            key_points = []
+            # 2. Parse the LLM response into structured format
+            parsed_response = self._parse_llm_response(response)
             
-            if input_data.include_key_points and len(sections) > 3:
-                key_points = [
-                    point.strip().replace("- ", "") 
-                    for point in sections[3].split("\n")
-                    if point.strip()
-                ]
-            
+            # 3. Create Summary object
             summary = Summary(
-                title=title,
-                brief=brief,
-                detailed=detailed,
-                key_points=key_points,
-                word_count=len(detailed.split()),
-                metadata={
-                    "style": input_data.style,
-                    "original_length": len(input_data.content.split())
-                }
+                title=parsed_response["title"],
+                brief=parsed_response["brief"],
+                detailed=parsed_response["detailed"],
+                key_points=parsed_response["key_points"],
+                word_count=len(parsed_response["detailed"].split())
             )
             
-            compression_ratio = len(detailed.split()) / len(input_data.content.split())
-            
+            # 4. Return properly formatted output
             return SummarizationOutput(
                 success=True,
                 data={
                     "summary": summary.dict(),
-                    "compression_ratio": compression_ratio
+                    "compression_ratio": len(summary.detailed.split()) / len(input_data.content.split())
                 },
                 summary=summary,
-                compression_ratio=compression_ratio
+                compression_ratio=len(summary.detailed.split()) / len(input_data.content.split())
             )
             
         except Exception as e:
-            error = WorkflowError(
+            raise WorkflowError(
                 code="SUMMARIZATION_ERROR",
                 message=str(e),
                 severity=ErrorSeverity.MEDIUM,
                 category=ErrorCategory.PROCESSING,
-                context={
-                    "style": input_data.style,
-                    "content_length": len(input_data.content)
-                }
+                context={"content_length": len(input_data.content)}
             )
-            raise error
+
+    def _parse_llm_response(self, response: str) -> Dict[str, Any]:
+        """Parse the LLM response into structured format"""
+        try:
+            lines = response.strip().split('\n')
+            result = {
+                "title": "",
+                "brief": "",
+                "detailed": "",
+                "key_points": []
+            }
+            
+            current_section = None
+            for line in lines:
+                if line.startswith("TITLE:"):
+                    current_section = "title"
+                    result["title"] = line.replace("TITLE:", "").strip()
+                elif line.startswith("BRIEF:"):
+                    current_section = "brief"
+                    result["brief"] = line.replace("BRIEF:", "").strip()
+                elif line.startswith("DETAILED:"):
+                    current_section = "detailed"
+                    result["detailed"] = line.replace("DETAILED:", "").strip()
+                elif line.startswith("KEY POINTS:"):
+                    current_section = "key_points"
+                elif line.strip().startswith("-") and current_section == "key_points":
+                    result["key_points"].append(line.strip()[1:].strip())
+                    
+            return result
+        except Exception as e:
+            raise ValueError(f"Failed to parse LLM response: {str(e)}")
     
     async def _validate_summary(self, summary: str, original: str) -> bool:
         """Validate summary for factual consistency"""

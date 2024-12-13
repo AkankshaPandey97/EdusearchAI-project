@@ -43,102 +43,88 @@ async def process_query(content: str, metadata: Dict[str, Any] = None) -> Dict[s
 class ContentEnrichmentWorkflow(BaseWorkflow):
     def __init__(self):
         super().__init__()
-        self.segmentation_agent = TopicSegmentationAgent()
         self.summarization_agent = SummarizationAgent()
+        self.topic_segmentation_agent = TopicSegmentationAgent()
         self.research_notes_agent = ResearchNotesAgent()
         
     async def segment_content(self, state: WorkflowState) -> WorkflowState:
+        """Segment content into topics"""
         try:
-            segmentation_input = {
-                "content": state["context"]["content"],
-                "max_segments": state["metadata"].get("max_segments", 10)
-            }
+            segments = await self.topic_segmentation_agent.process({
+                "content": state["context"].get("content", ""),
+                "min_segment_length": 100,
+                "max_segments": 10
+            })
             
-            segmentation_result = await self.segmentation_agent.process(segmentation_input)
-            
-            if not segmentation_result.success:
+            if segments.success:
+                state["results"].append({"segments": segments.data})
+                return state
+            else:
                 raise WorkflowError(
                     code="SEGMENTATION_FAILED",
-                    message=str(segmentation_result.error),
-                    severity=ErrorSeverity.HIGH,
-                    category=ErrorCategory.PROCESSING,
-                    context={"input": segmentation_input}
+                    message=str(segments.error),
+                    severity=ErrorSeverity.MEDIUM,
+                    category=ErrorCategory.PROCESSING
                 )
                 
-            state["results"].append({"segments": segmentation_result.segments})
-            return state
-            
-        except WorkflowError as we:
-            await self.state_manager.handle_error(we)
-            state["errors"].append(we)
-            return state
         except Exception as e:
             error = WorkflowError(
-                code="CONTENT_SEGMENTATION_ERROR",
-                message=str(e),
-                severity=ErrorSeverity.HIGH,
-                category=ErrorCategory.PROCESSING,
-                context={"content": state["context"].get("content")}
-            )
-            await self.state_manager.handle_error(error)
-            state["errors"].append(error)
-            return state
-    
-    async def generate_summaries(self, state: WorkflowState) -> WorkflowState:
-        try:
-            if not state["results"] or "segments" not in state["results"][-1]:
-                raise WorkflowError(
-                    code="NO_SEGMENTS_FOUND",
-                    message="No segments available for summarization",
-                    severity=ErrorSeverity.HIGH,
-                    category=ErrorCategory.VALIDATION,
-                    context={"state": state}
-                )
-                
-            for segment in state["results"][-1]["segments"]:
-                summary_input = {
-                    "content": segment.content,
-                    "style": state["metadata"].get("summary_style", "academic")
-                }
-                
-                summary_result = await self.summarization_agent.process(summary_input)
-                
-                if not summary_result.success:
-                    raise WorkflowError(
-                        code="SUMMARIZATION_FAILED",
-                        message=str(summary_result.error),
-                        severity=ErrorSeverity.MEDIUM,
-                        category=ErrorCategory.PROCESSING,
-                        context={"segment": segment.dict()}
-                    )
-                    
-                segment.summary = summary_result.summary
-                
-            return state
-            
-        except WorkflowError as we:
-            await self.state_manager.handle_error(we)
-            state["errors"].append(we)
-            return state
-        except Exception as e:
-            error = WorkflowError(
-                code="SUMMARIZATION_ERROR",
+                code="SEGMENTATION_ERROR",
                 message=str(e),
                 severity=ErrorSeverity.MEDIUM,
                 category=ErrorCategory.PROCESSING,
-                context={"segments": len(state["results"][-1]["segments"])}
+                context={"content_length": len(state["context"].get("content", ""))}
             )
-            await self.state_manager.handle_error(error)
             state["errors"].append(error)
             return state
-    
+
+    async def generate_summaries(self, state: WorkflowState) -> WorkflowState:
+        """Generate summaries for each segment"""
+        try:
+            segments = state["results"][-1].get("segments", [])
+            summaries = []
+            
+            for segment in segments:
+                summary = await self.summarization_agent.process({
+                    "content": segment["content"],
+                    "style": "default"
+                })
+                
+                if summary.success:
+                    summaries.append(summary.data)
+                else:
+                    raise WorkflowError(
+                        code="SUMMARY_GENERATION_FAILED",
+                        message=str(summary.error),
+                        severity=ErrorSeverity.MEDIUM,
+                        category=ErrorCategory.PROCESSING
+                    )
+            
+            state["results"].append({"summaries": summaries})
+            return state
+            
+        except Exception as e:
+            error = WorkflowError(
+                code="SUMMARY_ERROR",
+                message=str(e),
+                severity=ErrorSeverity.MEDIUM,
+                category=ErrorCategory.PROCESSING,
+                context={"segments_count": len(segments)}
+            )
+            state["errors"].append(error)
+            return state
+
     def create_workflow(self) -> StateGraph:
+        """Create the workflow graph"""
         # Add nodes
         self.graph.add_node("segment", self.segment_content)
         self.graph.add_node("summarize", self.generate_summaries)
         
-        # Define edges
-        self.graph.add_edge("segment", "summarize")
+        # Define edges with conditions
+        self.graph.add_conditional_edges(
+            "segment",
+            lambda x: "summarize" if not x.get("errors") else END
+        )
         self.graph.add_edge("summarize", END)
         
         # Set entry point

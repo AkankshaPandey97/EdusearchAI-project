@@ -1,4 +1,4 @@
-from typing import Dict, Any, Optional
+from typing import Dict, Any, Optional, Union
 from abc import ABC, abstractmethod
 #from langchain_community.chat_models import ChatOpenAI
 from langchain_openai import ChatOpenAI
@@ -22,7 +22,10 @@ class AgentOutput(BaseModel):
 
 class BaseAgent(ABC):
     def __init__(self, model_name: str = "gpt-4-turbo-preview"):
-        self.llm = llm_manager.get_llm()
+        self.llm = ChatOpenAI(
+            model_name=model_name,
+            temperature=0.7
+        )
         self.state_manager = StateManager()
         self.retry_strategy = RetryStrategy()
         
@@ -92,9 +95,17 @@ class BaseAgent(ABC):
             error=error
         )
 
-    async def process(self, input_data: AgentInput) -> AgentOutput:
+    async def process(self, input_data: Union[Dict[str, Any], AgentInput]) -> AgentOutput:
         """Process the input and return output"""
         try:
+            # Convert dict to AgentInput if needed
+            if isinstance(input_data, dict):
+                input_data = AgentInput(**input_data)
+            
+            # Validate input
+            if not isinstance(input_data, AgentInput):
+                raise ValueError(f"Expected AgentInput, got {type(input_data)}")
+            
             # Update state with input
             await self.state_manager.update_state("input", input_data.dict())
             
@@ -116,7 +127,10 @@ class BaseAgent(ABC):
                 message=str(e),
                 severity=ErrorSeverity.HIGH,
                 category=self._categorize_error(e),
-                context={"agent": self.__class__.__name__, "input": input_data.dict()}
+                context={
+                    "agent": self.__class__.__name__, 
+                    "input": input_data.dict() if hasattr(input_data, 'dict') else str(input_data)
+                }
             )
             await self.state_manager.handle_error(error)
             return AgentOutput(

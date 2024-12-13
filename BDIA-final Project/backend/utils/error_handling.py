@@ -9,18 +9,16 @@ import logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-class ErrorSeverity(Enum):
+class ErrorSeverity(str, Enum):
     LOW = "low"
     MEDIUM = "medium"
     HIGH = "high"
     CRITICAL = "critical"
 
-class ErrorCategory(Enum):
-    VALIDATION = "validation"
-    RATE_LIMIT = "rate_limit"
+class ErrorCategory(str, Enum):
     API = "api"
-    DATABASE = "database"
     PROCESSING = "processing"
+    RATE_LIMIT = "rate_limit"
     SYSTEM = "system"
 
 class RetryStrategy(BaseModel):
@@ -41,6 +39,11 @@ class WorkflowError(BaseModel):
     
     def should_retry(self, max_retries: int) -> bool:
         return self.recoverable and self.retry_count < max_retries
+    
+    class Config:
+        json_encoders = {
+            datetime: lambda v: v.isoformat()
+        }
 
 class ErrorHandler:
     def __init__(self, retry_strategy: RetryStrategy = RetryStrategy()):
@@ -111,6 +114,8 @@ class StateManager:
         self.current_state: Dict[str, Any] = {}
         self.errors: List[WorkflowError] = []
         self.context_metrics: Dict[str, Any] = {}
+        self._error_handlers: List[Callable] = []
+        self.error_handler = ErrorHandler()
     
     async def update_state(self, key: str, value: Any) -> bool:
         try:
@@ -162,3 +167,24 @@ class StateManager:
         async with self._lock:
             self.errors.append(error)
             await self._notify_error_handlers(error)
+    
+    async def _notify_error_handlers(self, error: WorkflowError):
+        """Notify all registered error handlers of a new error"""
+        for handler in self._error_handlers:
+            try:
+                await handler(error)
+            except Exception as e:
+                print(f"Error in error handler: {str(e)}")
+    
+    def register_error_handler(self, handler: Callable):
+        """Register a new error handler"""
+        self._error_handlers.append(handler)
+    
+    def get_errors(self) -> List[WorkflowError]:
+        """Get all recorded errors"""
+        return self._errors.copy()
+    
+    async def clear_errors(self):
+        """Clear all recorded errors"""
+        async with self._lock:
+            self._errors.clear()

@@ -15,6 +15,11 @@ class Settings(BaseSettings):
     pinecone_api_key: str  # Changed from PINECONE_API_KEY
     api_key: str  # Changed from API_KEY
     
+    BIGQUERY_PROJECT_ID: Optional[str] = None
+    BIGQUERY_DATASET: Optional[str] = None
+    BIGQUERY_TABLE: Optional[str] = None
+    GOOGLE_APPLICATION_CREDENTIALS: Optional[str] = None
+
     # Pinecone settings
     pinecone_index_name: str  # Changed from PINECONE_INDEX_NAME
     pinecone_environment: str  # Changed from PINECONE_ENVIRONMENT
@@ -40,6 +45,8 @@ class Settings(BaseSettings):
     rate_limit_per_minute: int = 60
     burst_limit: int = 10
     max_concurrent: int = 20
+
+    ENV: str = "development"  # default to development
 
     class Config:
         env_file = ".env"

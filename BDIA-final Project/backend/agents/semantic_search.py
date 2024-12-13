@@ -1,4 +1,4 @@
-from typing import List, Dict, Optional
+from typing import Any, List, Dict, Optional
 from pydantic import BaseModel, Field
 from .base import BaseAgent, AgentInput, AgentOutput
 from langchain.schema import Document
