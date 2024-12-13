@@ -2870,3 +2870,394 @@ query
 2024-12-13 14:02:53 | INFO     | backend.api.endpoints.citation:generate_citation:47 - Generated 11 citations successfully
 2024-12-13 14:02:53 | INFO     | logging:callHandlers:1706 - Request: POST /api/v1/citation/generate Status: 200 Duration: 2.01s
 2024-12-13 14:06:33 | INFO     | logging:callHandlers:1706 - Shutting down application...
+2024-12-13 14:15:15 | INFO     | logging:callHandlers:1706 - Starting application...
+2024-12-13 14:15:15 | INFO     | backend.utils.model_loader:load_model:26 - Loading model: gpt-4-turbo-preview
+2024-12-13 14:15:15 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-13 14:15:15 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-13 14:15:16 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-13 14:15:16 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-13 14:15:16 | INFO     | backend.utils.model_loader:load_model:40 - Model gpt-4-turbo-preview loaded successfully
+2024-12-13 14:15:16 | INFO     | logging:callHandlers:1706 - Application startup complete
+2024-12-13 14:15:16 | INFO     | logging:callHandlers:1706 - Starting application...
+2024-12-13 14:15:16 | INFO     | logging:callHandlers:1706 - Application startup complete
+2024-12-13 14:15:39 | INFO     | logging:callHandlers:1706 - Request: GET /api/v1/playlists/metadata Status: 200 Duration: 0.00s
+2024-12-13 14:15:43 | INFO     | logging:callHandlers:1706 - Request: GET /api/v1/playlists/metadata Status: 200 Duration: 0.00s
+2024-12-13 14:15:44 | INFO     | logging:callHandlers:1706 - Request: GET /api/v1/playlists/PLUl4u3cNGP61MdtwGTqZA0MreSaDybji8/status Status: 200 Duration: 0.00s
+2024-12-13 14:15:44 | INFO     | logging:callHandlers:1706 - Request: POST /api/v1/playlists/process Status: 422 Duration: 0.00s
+2024-12-13 14:15:48 | DEBUG    | logging:callHandlers:1706 - Starting summary generation for course: Mathematics of Big Data and Machine Learning
+2024-12-13 14:15:48 | DEBUG    | logging:callHandlers:1706 - Retrieved BigQuery settings: {'GOOGLE_APPLICATION_CREDENTIALS': 'finalproject-442400-ff1f8be678f0.json', 'BIGQUERY_PROJECT_ID': 'finalproject-442400', 'BIGQUERY_DATASET': 'coursesdata', 'BIGQUERY_TABLE': 'Courses'}
+2024-12-13 14:15:48 | DEBUG    | logging:callHandlers:1706 - Initializing BigQuery client
+2024-12-13 14:15:48 | DEBUG    | logging:callHandlers:1706 - Checking finalproject-442400-ff1f8be678f0.json for explicit credentials as part of auth process...
+2024-12-13 14:15:48 | DEBUG    | logging:callHandlers:1706 - Checking finalproject-442400-ff1f8be678f0.json for explicit credentials as part of auth process...
+2024-12-13 14:15:48 | DEBUG    | logging:callHandlers:1706 - Executing query: 
+        SELECT title, description
+        FROM `finalproject-442400.coursesdata.Courses`
+        WHERE LOWER(title) = LOWER(@course_title)
+        OR playlist_id = @course_title
+        LIMIT 1
+        
+2024-12-13 14:15:48 | DEBUG    | logging:callHandlers:1706 - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-12-13 14:15:48 | DEBUG    | logging:callHandlers:1706 - Making request: POST https://oauth2.googleapis.com/token
+2024-12-13 14:15:48 | DEBUG    | logging:callHandlers:1706 - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-12-13 14:15:48 | DEBUG    | logging:callHandlers:1706 - https://oauth2.googleapis.com:443 "POST /token HTTP/11" 200 None
+2024-12-13 14:15:48 | DEBUG    | logging:callHandlers:1706 - Starting new HTTPS connection (1): bigquery.googleapis.com:443
+2024-12-13 14:15:48 | DEBUG    | logging:callHandlers:1706 - https://bigquery.googleapis.com:443 "POST /bigquery/v2/projects/finalproject-442400/jobs?prettyPrint=false HTTP/11" 200 None
+2024-12-13 14:15:49 | DEBUG    | logging:callHandlers:1706 - https://bigquery.googleapis.com:443 "GET /bigquery/v2/projects/finalproject-442400/queries/4db3f3db-bb80-41f0-9fb6-544e7f175d77?maxResults=0&location=US&prettyPrint=false HTTP/11" 200 None
+2024-12-13 14:15:49 | DEBUG    | logging:callHandlers:1706 - https://bigquery.googleapis.com:443 "GET /bigquery/v2/projects/finalproject-442400/queries/4db3f3db-bb80-41f0-9fb6-544e7f175d77?fields=jobReference%2CtotalRows%2CpageToken%2Crows&location=US&formatOptions.useInt64Timestamp=True&prettyPrint=false HTTP/11" 200 None
+2024-12-13 14:15:49 | INFO     | logging:callHandlers:1706 - Request: GET /api/v1/summarize/Mathematics of Big Data and Machine Learning Status: 200 Duration: 1.25s
+2024-12-13 14:15:55 | INFO     | backend.api.endpoints.segments:get_segments:19 - Fetching segments for course: Mathematics of Big Data and Machine Learning
+2024-12-13 14:15:55 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-13 14:15:55 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-13 14:15:55 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-13 14:15:55 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-13 14:15:56 | DEBUG    | logging:callHandlers:1706 - Checking finalproject-442400-ff1f8be678f0.json for explicit credentials as part of auth process...
+2024-12-13 14:15:56 | DEBUG    | logging:callHandlers:1706 - Checking finalproject-442400-ff1f8be678f0.json for explicit credentials as part of auth process...
+2024-12-13 14:15:56 | INFO     | backend.agents.topic_segmentation:_fetch_topics_from_bigquery:66 - Executing query for course: Mathematics_of_Big_Data_and_Machine_Learning
+2024-12-13 14:15:56 | DEBUG    | logging:callHandlers:1706 - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-12-13 14:15:56 | DEBUG    | logging:callHandlers:1706 - Making request: POST https://oauth2.googleapis.com/token
+2024-12-13 14:15:56 | DEBUG    | logging:callHandlers:1706 - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-12-13 14:15:56 | DEBUG    | logging:callHandlers:1706 - https://oauth2.googleapis.com:443 "POST /token HTTP/11" 200 None
+2024-12-13 14:15:56 | DEBUG    | logging:callHandlers:1706 - Starting new HTTPS connection (1): bigquery.googleapis.com:443
+2024-12-13 14:15:56 | DEBUG    | logging:callHandlers:1706 - https://bigquery.googleapis.com:443 "POST /bigquery/v2/projects/finalproject-442400/jobs?prettyPrint=false HTTP/11" 200 None
+2024-12-13 14:15:57 | DEBUG    | logging:callHandlers:1706 - https://bigquery.googleapis.com:443 "GET /bigquery/v2/projects/finalproject-442400/queries/7c9e1c13-57a8-4ae5-b3f3-8c76a03a1c38?maxResults=0&location=US&prettyPrint=false HTTP/11" 200 None
+2024-12-13 14:15:57 | DEBUG    | logging:callHandlers:1706 - https://bigquery.googleapis.com:443 "GET /bigquery/v2/projects/finalproject-442400/queries/7c9e1c13-57a8-4ae5-b3f3-8c76a03a1c38?fields=jobReference%2CtotalRows%2CpageToken%2Crows&location=US&formatOptions.useInt64Timestamp=True&prettyPrint=false HTTP/11" 200 None
+2024-12-13 14:15:57 | INFO     | backend.agents.topic_segmentation:_fetch_topics_from_bigquery:80 - Found 11 topics
+2024-12-13 14:15:57 | INFO     | backend.agents.topic_segmentation:_process_implementation:119 - Generated 11 segments successfully
+2024-12-13 14:15:57 | INFO     | logging:callHandlers:1706 - Request: POST /api/v1/segments Status: 200 Duration: 2.01s
+2024-12-13 14:16:00 | INFO     | backend.api.endpoints.citation:generate_citation:22 - Generating citation for content: Mathematics of Big Data and Machine Learning
+2024-12-13 14:16:00 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-13 14:16:00 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-13 14:16:01 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-13 14:16:01 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-13 14:16:02 | DEBUG    | logging:callHandlers:1706 - Checking finalproject-442400-ff1f8be678f0.json for explicit credentials as part of auth process...
+2024-12-13 14:16:02 | DEBUG    | logging:callHandlers:1706 - Checking finalproject-442400-ff1f8be678f0.json for explicit credentials as part of auth process...
+2024-12-13 14:16:02 | DEBUG    | backend.api.endpoints.citation:generate_citation:35 - Processing citation request...
+2024-12-13 14:16:02 | INFO     | backend.agents.citation:_fetch_urls_from_bigquery:96 - Executing query for course: Mathematics_of_Big_Data_and_Machine_Learning
+2024-12-13 14:16:02 | DEBUG    | logging:callHandlers:1706 - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-12-13 14:16:02 | DEBUG    | logging:callHandlers:1706 - Making request: POST https://oauth2.googleapis.com/token
+2024-12-13 14:16:02 | DEBUG    | logging:callHandlers:1706 - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-12-13 14:16:02 | DEBUG    | logging:callHandlers:1706 - https://oauth2.googleapis.com:443 "POST /token HTTP/11" 200 None
+2024-12-13 14:16:02 | DEBUG    | logging:callHandlers:1706 - Starting new HTTPS connection (1): bigquery.googleapis.com:443
+2024-12-13 14:16:02 | DEBUG    | logging:callHandlers:1706 - https://bigquery.googleapis.com:443 "POST /bigquery/v2/projects/finalproject-442400/jobs?prettyPrint=false HTTP/11" 200 None
+2024-12-13 14:16:03 | DEBUG    | logging:callHandlers:1706 - https://bigquery.googleapis.com:443 "GET /bigquery/v2/projects/finalproject-442400/queries/70274807-86bc-4cf3-82ee-623552f99f7b?maxResults=0&location=US&prettyPrint=false HTTP/11" 200 None
+2024-12-13 14:16:03 | DEBUG    | logging:callHandlers:1706 - https://bigquery.googleapis.com:443 "GET /bigquery/v2/projects/finalproject-442400/queries/70274807-86bc-4cf3-82ee-623552f99f7b?fields=jobReference%2CtotalRows%2CpageToken%2Crows&location=US&formatOptions.useInt64Timestamp=True&prettyPrint=false HTTP/11" 200 None
+2024-12-13 14:16:03 | INFO     | backend.agents.citation:_fetch_urls_from_bigquery:109 - Found 11 citations
+2024-12-13 14:16:03 | INFO     | backend.agents.citation:_process_implementation:60 - Generated 11 citations successfully
+2024-12-13 14:16:03 | INFO     | backend.api.endpoints.citation:generate_citation:47 - Generated 11 citations successfully
+2024-12-13 14:16:03 | INFO     | logging:callHandlers:1706 - Request: POST /api/v1/citation/generate Status: 200 Duration: 2.52s
+2024-12-13 14:17:52 | INFO     | logging:callHandlers:1706 - Request: GET /api/v1/playlists/metadata Status: 200 Duration: 0.00s
+2024-12-13 14:24:15 | INFO     | logging:callHandlers:1706 - Request: GET /api/v1/playlists/metadata Status: 200 Duration: 0.02s
+2024-12-13 14:24:19 | INFO     | logging:callHandlers:1706 - Request: GET /api/v1/playlists/metadata Status: 200 Duration: 0.00s
+2024-12-13 14:24:19 | INFO     | logging:callHandlers:1706 - Request: GET /api/v1/playlists/PLUl4u3cNGP6083Y-NElqTRAgKtXQxgD3g/status Status: 200 Duration: 0.01s
+2024-12-13 14:24:19 | INFO     | logging:callHandlers:1706 - Request: POST /api/v1/playlists/process Status: 422 Duration: 0.02s
+2024-12-13 14:24:23 | DEBUG    | logging:callHandlers:1706 - Starting summary generation for course: How to Win at Texas Hold'em Poker
+2024-12-13 14:24:23 | DEBUG    | logging:callHandlers:1706 - Retrieved BigQuery settings: {'GOOGLE_APPLICATION_CREDENTIALS': 'finalproject-442400-ff1f8be678f0.json', 'BIGQUERY_PROJECT_ID': 'finalproject-442400', 'BIGQUERY_DATASET': 'coursesdata', 'BIGQUERY_TABLE': 'Courses'}
+2024-12-13 14:24:23 | DEBUG    | logging:callHandlers:1706 - Initializing BigQuery client
+2024-12-13 14:24:23 | DEBUG    | logging:callHandlers:1706 - Checking finalproject-442400-ff1f8be678f0.json for explicit credentials as part of auth process...
+2024-12-13 14:24:23 | DEBUG    | logging:callHandlers:1706 - Checking finalproject-442400-ff1f8be678f0.json for explicit credentials as part of auth process...
+2024-12-13 14:24:23 | DEBUG    | logging:callHandlers:1706 - Executing query: 
+        SELECT title, description
+        FROM `finalproject-442400.coursesdata.Courses`
+        WHERE LOWER(title) = LOWER(@course_title)
+        OR playlist_id = @course_title
+        LIMIT 1
+        
+2024-12-13 14:24:23 | DEBUG    | logging:callHandlers:1706 - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-12-13 14:24:23 | DEBUG    | logging:callHandlers:1706 - Making request: POST https://oauth2.googleapis.com/token
+2024-12-13 14:24:23 | DEBUG    | logging:callHandlers:1706 - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-12-13 14:24:24 | DEBUG    | logging:callHandlers:1706 - https://oauth2.googleapis.com:443 "POST /token HTTP/11" 200 None
+2024-12-13 14:24:24 | DEBUG    | logging:callHandlers:1706 - Starting new HTTPS connection (1): bigquery.googleapis.com:443
+2024-12-13 14:24:24 | DEBUG    | logging:callHandlers:1706 - https://bigquery.googleapis.com:443 "POST /bigquery/v2/projects/finalproject-442400/jobs?prettyPrint=false HTTP/11" 200 None
+2024-12-13 14:24:24 | DEBUG    | logging:callHandlers:1706 - https://bigquery.googleapis.com:443 "GET /bigquery/v2/projects/finalproject-442400/queries/d6cc4b79-0a01-487a-8fec-fedac980291e?maxResults=0&location=US&prettyPrint=false HTTP/11" 200 None
+2024-12-13 14:24:24 | DEBUG    | logging:callHandlers:1706 - https://bigquery.googleapis.com:443 "GET /bigquery/v2/projects/finalproject-442400/queries/d6cc4b79-0a01-487a-8fec-fedac980291e?fields=jobReference%2CtotalRows%2CpageToken%2Crows&location=US&formatOptions.useInt64Timestamp=True&prettyPrint=false HTTP/11" 200 None
+2024-12-13 14:24:24 | INFO     | logging:callHandlers:1706 - Request: GET /api/v1/summarize/How to Win at Texas Hold'em Poker Status: 200 Duration: 1.14s
+2024-12-13 14:24:28 | INFO     | backend.api.endpoints.segments:get_segments:19 - Fetching segments for course: How to Win at Texas Hold'em Poker
+2024-12-13 14:24:28 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-13 14:24:28 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-13 14:24:29 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-13 14:24:29 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-13 14:24:29 | DEBUG    | logging:callHandlers:1706 - Checking finalproject-442400-ff1f8be678f0.json for explicit credentials as part of auth process...
+2024-12-13 14:24:29 | DEBUG    | logging:callHandlers:1706 - Checking finalproject-442400-ff1f8be678f0.json for explicit credentials as part of auth process...
+2024-12-13 14:24:30 | INFO     | backend.agents.topic_segmentation:_fetch_topics_from_bigquery:66 - Executing query for course: How_to_Win_at_Texas_Hold'em_Poker
+2024-12-13 14:24:30 | DEBUG    | logging:callHandlers:1706 - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-12-13 14:24:30 | DEBUG    | logging:callHandlers:1706 - Making request: POST https://oauth2.googleapis.com/token
+2024-12-13 14:24:30 | DEBUG    | logging:callHandlers:1706 - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-12-13 14:24:30 | DEBUG    | logging:callHandlers:1706 - https://oauth2.googleapis.com:443 "POST /token HTTP/11" 200 None
+2024-12-13 14:24:30 | DEBUG    | logging:callHandlers:1706 - Starting new HTTPS connection (1): bigquery.googleapis.com:443
+2024-12-13 14:24:30 | DEBUG    | logging:callHandlers:1706 - https://bigquery.googleapis.com:443 "POST /bigquery/v2/projects/finalproject-442400/jobs?prettyPrint=false HTTP/11" 200 None
+2024-12-13 14:24:30 | DEBUG    | logging:callHandlers:1706 - https://bigquery.googleapis.com:443 "GET /bigquery/v2/projects/finalproject-442400/queries/f0017e38-61cb-473e-88e2-fb2336d87ebe?maxResults=0&location=US&prettyPrint=false HTTP/11" 200 None
+2024-12-13 14:24:31 | DEBUG    | logging:callHandlers:1706 - https://bigquery.googleapis.com:443 "GET /bigquery/v2/projects/finalproject-442400/queries/f0017e38-61cb-473e-88e2-fb2336d87ebe?fields=jobReference%2CtotalRows%2CpageToken%2Crows&location=US&formatOptions.useInt64Timestamp=True&prettyPrint=false HTTP/11" 200 None
+2024-12-13 14:24:31 | INFO     | backend.agents.topic_segmentation:_fetch_topics_from_bigquery:80 - Found 5 topics
+2024-12-13 14:24:31 | INFO     | backend.agents.topic_segmentation:_process_implementation:119 - Generated 5 segments successfully
+2024-12-13 14:24:31 | INFO     | logging:callHandlers:1706 - Request: POST /api/v1/segments Status: 200 Duration: 2.21s
+2024-12-13 14:24:36 | INFO     | backend.api.endpoints.citation:generate_citation:22 - Generating citation for content: How to Win at Texas Hold'em Poker
+2024-12-13 14:24:36 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-13 14:24:36 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-13 14:24:36 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-13 14:24:36 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-13 14:24:37 | DEBUG    | logging:callHandlers:1706 - Checking finalproject-442400-ff1f8be678f0.json for explicit credentials as part of auth process...
+2024-12-13 14:24:37 | DEBUG    | logging:callHandlers:1706 - Checking finalproject-442400-ff1f8be678f0.json for explicit credentials as part of auth process...
+2024-12-13 14:24:37 | DEBUG    | backend.api.endpoints.citation:generate_citation:35 - Processing citation request...
+2024-12-13 14:24:37 | INFO     | backend.agents.citation:_fetch_urls_from_bigquery:96 - Executing query for course: How_to_Win_at_Texas_Hold'em_Poker
+2024-12-13 14:24:37 | DEBUG    | logging:callHandlers:1706 - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-12-13 14:24:37 | DEBUG    | logging:callHandlers:1706 - Making request: POST https://oauth2.googleapis.com/token
+2024-12-13 14:24:37 | DEBUG    | logging:callHandlers:1706 - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-12-13 14:24:37 | DEBUG    | logging:callHandlers:1706 - https://oauth2.googleapis.com:443 "POST /token HTTP/11" 200 None
+2024-12-13 14:24:37 | DEBUG    | logging:callHandlers:1706 - Starting new HTTPS connection (1): bigquery.googleapis.com:443
+2024-12-13 14:24:38 | DEBUG    | logging:callHandlers:1706 - https://bigquery.googleapis.com:443 "POST /bigquery/v2/projects/finalproject-442400/jobs?prettyPrint=false HTTP/11" 200 None
+2024-12-13 14:24:38 | DEBUG    | logging:callHandlers:1706 - https://bigquery.googleapis.com:443 "GET /bigquery/v2/projects/finalproject-442400/queries/9dae68a5-c4aa-47bb-829f-eefe27d71465?maxResults=0&location=US&prettyPrint=false HTTP/11" 200 None
+2024-12-13 14:24:38 | DEBUG    | logging:callHandlers:1706 - https://bigquery.googleapis.com:443 "GET /bigquery/v2/projects/finalproject-442400/queries/9dae68a5-c4aa-47bb-829f-eefe27d71465?fields=jobReference%2CtotalRows%2CpageToken%2Crows&location=US&formatOptions.useInt64Timestamp=True&prettyPrint=false HTTP/11" 200 None
+2024-12-13 14:24:38 | INFO     | backend.agents.citation:_fetch_urls_from_bigquery:109 - Found 5 citations
+2024-12-13 14:24:38 | INFO     | backend.agents.citation:_process_implementation:60 - Generated 5 citations successfully
+2024-12-13 14:24:38 | INFO     | backend.api.endpoints.citation:generate_citation:47 - Generated 5 citations successfully
+2024-12-13 14:24:38 | INFO     | logging:callHandlers:1706 - Request: POST /api/v1/citation/generate Status: 200 Duration: 2.00s
+2024-12-13 14:29:57 | INFO     | logging:callHandlers:1706 - Shutting down application...
+2024-12-13 14:31:10 | INFO     | logging:callHandlers:1706 - Starting application...
+2024-12-13 14:31:10 | INFO     | backend.utils.model_loader:load_model:26 - Loading model: gpt-4-turbo-preview
+2024-12-13 14:31:10 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-13 14:31:10 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-13 14:31:11 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-13 14:31:11 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-13 14:31:11 | INFO     | backend.utils.model_loader:load_model:40 - Model gpt-4-turbo-preview loaded successfully
+2024-12-13 14:31:11 | INFO     | logging:callHandlers:1706 - Application startup complete
+2024-12-13 14:31:11 | INFO     | logging:callHandlers:1706 - Starting application...
+2024-12-13 14:31:11 | INFO     | logging:callHandlers:1706 - Application startup complete
+2024-12-13 14:31:28 | INFO     | logging:callHandlers:1706 - Request: GET /api/v1/playlists/metadata Status: 200 Duration: 0.00s
+2024-12-13 14:31:35 | INFO     | logging:callHandlers:1706 - Request: GET /api/v1/playlists/metadata Status: 200 Duration: 0.00s
+2024-12-13 14:31:35 | INFO     | logging:callHandlers:1706 - Request: GET /api/v1/playlists/PLUl4u3cNGP6083Y-NElqTRAgKtXQxgD3g/status Status: 200 Duration: 0.00s
+2024-12-13 14:31:35 | INFO     | logging:callHandlers:1706 - Request: POST /api/v1/playlists/process Status: 422 Duration: 0.00s
+2024-12-13 14:31:42 | DEBUG    | logging:callHandlers:1706 - Starting summary generation for course: How to Win at Texas Hold'em Poker
+2024-12-13 14:31:42 | DEBUG    | logging:callHandlers:1706 - Retrieved BigQuery settings: {'GOOGLE_APPLICATION_CREDENTIALS': 'finalproject-442400-ff1f8be678f0.json', 'BIGQUERY_PROJECT_ID': 'finalproject-442400', 'BIGQUERY_DATASET': 'coursesdata', 'BIGQUERY_TABLE': 'Courses'}
+2024-12-13 14:31:42 | DEBUG    | logging:callHandlers:1706 - Initializing BigQuery client
+2024-12-13 14:31:42 | DEBUG    | logging:callHandlers:1706 - Checking finalproject-442400-ff1f8be678f0.json for explicit credentials as part of auth process...
+2024-12-13 14:31:42 | DEBUG    | logging:callHandlers:1706 - Checking finalproject-442400-ff1f8be678f0.json for explicit credentials as part of auth process...
+2024-12-13 14:31:42 | DEBUG    | logging:callHandlers:1706 - Executing query: 
+        SELECT title, description
+        FROM `finalproject-442400.coursesdata.Courses`
+        WHERE LOWER(title) = LOWER(@course_title)
+        OR playlist_id = @course_title
+        LIMIT 1
+        
+2024-12-13 14:31:42 | DEBUG    | logging:callHandlers:1706 - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-12-13 14:31:42 | DEBUG    | logging:callHandlers:1706 - Making request: POST https://oauth2.googleapis.com/token
+2024-12-13 14:31:42 | DEBUG    | logging:callHandlers:1706 - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-12-13 14:31:42 | DEBUG    | logging:callHandlers:1706 - https://oauth2.googleapis.com:443 "POST /token HTTP/11" 200 None
+2024-12-13 14:31:42 | DEBUG    | logging:callHandlers:1706 - Starting new HTTPS connection (1): bigquery.googleapis.com:443
+2024-12-13 14:31:43 | DEBUG    | logging:callHandlers:1706 - https://bigquery.googleapis.com:443 "POST /bigquery/v2/projects/finalproject-442400/jobs?prettyPrint=false HTTP/11" 200 None
+2024-12-13 14:31:43 | DEBUG    | logging:callHandlers:1706 - https://bigquery.googleapis.com:443 "GET /bigquery/v2/projects/finalproject-442400/queries/0fc84e84-b4df-465b-bf36-f1fc5c3f246f?maxResults=0&location=US&prettyPrint=false HTTP/11" 200 None
+2024-12-13 14:31:43 | DEBUG    | logging:callHandlers:1706 - https://bigquery.googleapis.com:443 "GET /bigquery/v2/projects/finalproject-442400/queries/0fc84e84-b4df-465b-bf36-f1fc5c3f246f?fields=jobReference%2CtotalRows%2CpageToken%2Crows&location=US&formatOptions.useInt64Timestamp=True&prettyPrint=false HTTP/11" 200 None
+2024-12-13 14:31:43 | INFO     | logging:callHandlers:1706 - Request: GET /api/v1/summarize/How to Win at Texas Hold'em Poker Status: 200 Duration: 1.31s
+2024-12-13 14:31:47 | INFO     | backend.api.endpoints.segments:get_segments:19 - Fetching segments for course: How to Win at Texas Hold'em Poker
+2024-12-13 14:31:47 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-13 14:31:47 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-13 14:31:48 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-13 14:31:48 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-13 14:31:48 | DEBUG    | logging:callHandlers:1706 - Checking finalproject-442400-ff1f8be678f0.json for explicit credentials as part of auth process...
+2024-12-13 14:31:48 | DEBUG    | logging:callHandlers:1706 - Checking finalproject-442400-ff1f8be678f0.json for explicit credentials as part of auth process...
+2024-12-13 14:31:48 | INFO     | backend.agents.topic_segmentation:_fetch_topics_from_bigquery:66 - Executing query for course: How_to_Win_at_Texas_Hold'em_Poker
+2024-12-13 14:31:48 | DEBUG    | logging:callHandlers:1706 - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-12-13 14:31:48 | DEBUG    | logging:callHandlers:1706 - Making request: POST https://oauth2.googleapis.com/token
+2024-12-13 14:31:48 | DEBUG    | logging:callHandlers:1706 - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-12-13 14:31:48 | DEBUG    | logging:callHandlers:1706 - https://oauth2.googleapis.com:443 "POST /token HTTP/11" 200 None
+2024-12-13 14:31:48 | DEBUG    | logging:callHandlers:1706 - Starting new HTTPS connection (1): bigquery.googleapis.com:443
+2024-12-13 14:31:49 | DEBUG    | logging:callHandlers:1706 - https://bigquery.googleapis.com:443 "POST /bigquery/v2/projects/finalproject-442400/jobs?prettyPrint=false HTTP/11" 200 None
+2024-12-13 14:31:49 | DEBUG    | logging:callHandlers:1706 - https://bigquery.googleapis.com:443 "GET /bigquery/v2/projects/finalproject-442400/queries/34186616-3450-4e03-b670-c4491deb0673?maxResults=0&location=US&prettyPrint=false HTTP/11" 200 None
+2024-12-13 14:31:49 | DEBUG    | logging:callHandlers:1706 - https://bigquery.googleapis.com:443 "GET /bigquery/v2/projects/finalproject-442400/queries/34186616-3450-4e03-b670-c4491deb0673?fields=jobReference%2CtotalRows%2CpageToken%2Crows&location=US&formatOptions.useInt64Timestamp=True&prettyPrint=false HTTP/11" 200 None
+2024-12-13 14:31:49 | INFO     | backend.agents.topic_segmentation:_fetch_topics_from_bigquery:80 - Found 5 topics
+2024-12-13 14:31:49 | INFO     | backend.agents.topic_segmentation:_process_implementation:119 - Generated 5 segments successfully
+2024-12-13 14:31:49 | INFO     | logging:callHandlers:1706 - Request: POST /api/v1/segments Status: 200 Duration: 2.19s
+2024-12-13 14:31:53 | INFO     | backend.api.endpoints.citation:generate_citation:22 - Generating citation for content: How to Win at Texas Hold'em Poker
+2024-12-13 14:31:53 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-13 14:31:53 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-13 14:31:54 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-13 14:31:54 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-13 14:31:54 | DEBUG    | logging:callHandlers:1706 - Checking finalproject-442400-ff1f8be678f0.json for explicit credentials as part of auth process...
+2024-12-13 14:31:54 | DEBUG    | logging:callHandlers:1706 - Checking finalproject-442400-ff1f8be678f0.json for explicit credentials as part of auth process...
+2024-12-13 14:31:54 | DEBUG    | backend.api.endpoints.citation:generate_citation:35 - Processing citation request...
+2024-12-13 14:31:54 | INFO     | backend.agents.citation:_fetch_urls_from_bigquery:96 - Executing query for course: How_to_Win_at_Texas_Hold'em_Poker
+2024-12-13 14:31:54 | DEBUG    | logging:callHandlers:1706 - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-12-13 14:31:54 | DEBUG    | logging:callHandlers:1706 - Making request: POST https://oauth2.googleapis.com/token
+2024-12-13 14:31:54 | DEBUG    | logging:callHandlers:1706 - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-12-13 14:31:54 | DEBUG    | logging:callHandlers:1706 - https://oauth2.googleapis.com:443 "POST /token HTTP/11" 200 None
+2024-12-13 14:31:54 | DEBUG    | logging:callHandlers:1706 - Starting new HTTPS connection (1): bigquery.googleapis.com:443
+2024-12-13 14:31:55 | DEBUG    | logging:callHandlers:1706 - https://bigquery.googleapis.com:443 "POST /bigquery/v2/projects/finalproject-442400/jobs?prettyPrint=false HTTP/11" 200 None
+2024-12-13 14:31:55 | DEBUG    | logging:callHandlers:1706 - https://bigquery.googleapis.com:443 "GET /bigquery/v2/projects/finalproject-442400/queries/9b7c6230-f653-4b37-a0be-efd59be729fa?maxResults=0&location=US&prettyPrint=false HTTP/11" 200 None
+2024-12-13 14:31:55 | DEBUG    | logging:callHandlers:1706 - https://bigquery.googleapis.com:443 "GET /bigquery/v2/projects/finalproject-442400/queries/9b7c6230-f653-4b37-a0be-efd59be729fa?fields=jobReference%2CtotalRows%2CpageToken%2Crows&location=US&formatOptions.useInt64Timestamp=True&prettyPrint=false HTTP/11" 200 None
+2024-12-13 14:31:55 | INFO     | backend.agents.citation:_fetch_urls_from_bigquery:109 - Found 5 citations
+2024-12-13 14:31:55 | INFO     | backend.agents.citation:_process_implementation:60 - Generated 5 citations successfully
+2024-12-13 14:31:55 | INFO     | backend.api.endpoints.citation:generate_citation:47 - Generated 5 citations successfully
+2024-12-13 14:31:55 | INFO     | logging:callHandlers:1706 - Request: POST /api/v1/citation/generate Status: 200 Duration: 1.89s
+2024-12-13 14:32:01 | INFO     | backend.api.endpoints.qa:question_answering:16 - Processing question: poker rules ...
+2024-12-13 14:32:01 | DEBUG    | logging:callHandlers:1706 - Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'json_data': {'messages': [{'role': 'system', 'content': 'You are a helpful educational assistant.'}, {'role': 'user', 'content': 'poker rules '}], 'model': 'gpt-4-turbo-preview', 'max_tokens': 150}}
+2024-12-13 14:32:01 | DEBUG    | logging:callHandlers:1706 - Sending HTTP Request: POST https://api.openai.com/v1/chat/completions
+2024-12-13 14:32:01 | DEBUG    | logging:callHandlers:1706 - connect_tcp.started host='api.openai.com' port=443 local_address=None timeout=5.0 socket_options=None
+2024-12-13 14:32:01 | DEBUG    | logging:callHandlers:1706 - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x00000283F2976D50>
+2024-12-13 14:32:01 | DEBUG    | logging:callHandlers:1706 - start_tls.started ssl_context=<ssl.SSLContext object at 0x00000283F254C950> server_hostname='api.openai.com' timeout=5.0
+2024-12-13 14:32:01 | DEBUG    | logging:callHandlers:1706 - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x00000283F2976190>
+2024-12-13 14:32:01 | DEBUG    | logging:callHandlers:1706 - send_request_headers.started request=<Request [b'POST']>
+2024-12-13 14:32:01 | DEBUG    | logging:callHandlers:1706 - send_request_headers.complete
+2024-12-13 14:32:01 | DEBUG    | logging:callHandlers:1706 - send_request_body.started request=<Request [b'POST']>
+2024-12-13 14:32:01 | DEBUG    | logging:callHandlers:1706 - send_request_body.complete
+2024-12-13 14:32:01 | DEBUG    | logging:callHandlers:1706 - receive_response_headers.started request=<Request [b'POST']>
+2024-12-13 14:32:05 | DEBUG    | logging:callHandlers:1706 - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Fri, 13 Dec 2024 19:32:05 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-expose-headers', b'X-Request-ID'), (b'openai-organization', b'user-lo9rtdwrcomhygxvw5oumgll'), (b'openai-processing-ms', b'4083'), (b'openai-version', b'2020-10-01'), (b'x-ratelimit-limit-requests', b'500'), (b'x-ratelimit-limit-tokens', b'30000'), (b'x-ratelimit-remaining-requests', b'499'), (b'x-ratelimit-remaining-tokens', b'29835'), (b'x-ratelimit-reset-requests', b'120ms'), (b'x-ratelimit-reset-tokens', b'330ms'), (b'x-request-id', b'req_04a0823ab2d971ae33d6ddefb8e9cdc5'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'CF-Cache-Status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=LL.hsIbtysOzAH5ZrBOdXEhqlJtiBUWrZ6Zi4NhxYuw-1734118325-1.0.1.1-OACRh82V6jm3EqrIUfS8nNry.QewPztSEqMi0ymYhKleznu9ntPrduaFWEgaxSW6bX4nQmFHAm_MIyFp6vajaw; path=/; expires=Fri, 13-Dec-24 20:02:05 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'X-Content-Type-Options', b'nosniff'), (b'Set-Cookie', b'_cfuvid=ACP9OmsBwVbkBMpt.4mzVhgvpx4.IUt7DjYI7475PyI-1734118325467-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'8f1860b42b9d8d17-BOS'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2024-12-13 14:32:05 | INFO     | logging:callHandlers:1706 - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-13 14:32:05 | DEBUG    | logging:callHandlers:1706 - receive_response_body.started request=<Request [b'POST']>
+2024-12-13 14:32:05 | DEBUG    | logging:callHandlers:1706 - receive_response_body.complete
+2024-12-13 14:32:05 | DEBUG    | logging:callHandlers:1706 - response_closed.started
+2024-12-13 14:32:05 | DEBUG    | logging:callHandlers:1706 - response_closed.complete
+2024-12-13 14:32:05 | DEBUG    | logging:callHandlers:1706 - HTTP Response: POST https://api.openai.com/v1/chat/completions "200 OK" Headers([('date', 'Fri, 13 Dec 2024 19:32:05 GMT'), ('content-type', 'application/json'), ('transfer-encoding', 'chunked'), ('connection', 'keep-alive'), ('access-control-expose-headers', 'X-Request-ID'), ('openai-organization', 'user-lo9rtdwrcomhygxvw5oumgll'), ('openai-processing-ms', '4083'), ('openai-version', '2020-10-01'), ('x-ratelimit-limit-requests', '500'), ('x-ratelimit-limit-tokens', '30000'), ('x-ratelimit-remaining-requests', '499'), ('x-ratelimit-remaining-tokens', '29835'), ('x-ratelimit-reset-requests', '120ms'), ('x-ratelimit-reset-tokens', '330ms'), ('x-request-id', 'req_04a0823ab2d971ae33d6ddefb8e9cdc5'), ('strict-transport-security', 'max-age=31536000; includeSubDomains; preload'), ('cf-cache-status', 'DYNAMIC'), ('set-cookie', '__cf_bm=LL.hsIbtysOzAH5ZrBOdXEhqlJtiBUWrZ6Zi4NhxYuw-1734118325-1.0.1.1-OACRh82V6jm3EqrIUfS8nNry.QewPztSEqMi0ymYhKleznu9ntPrduaFWEgaxSW6bX4nQmFHAm_MIyFp6vajaw; path=/; expires=Fri, 13-Dec-24 20:02:05 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('x-content-type-options', 'nosniff'), ('set-cookie', '_cfuvid=ACP9OmsBwVbkBMpt.4mzVhgvpx4.IUt7DjYI7475PyI-1734118325467-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('server', 'cloudflare'), ('cf-ray', '8f1860b42b9d8d17-BOS'), ('content-encoding', 'gzip'), ('alt-svc', 'h3=":443"; ma=86400')])
+2024-12-13 14:32:05 | DEBUG    | logging:callHandlers:1706 - request_id: req_04a0823ab2d971ae33d6ddefb8e9cdc5
+2024-12-13 14:32:05 | INFO     | backend.api.endpoints.qa:question_answering:29 - Answer generated successfully
+2024-12-13 14:32:05 | INFO     | logging:callHandlers:1706 - Request: POST /api/v1/qa Status: 200 Duration: 4.33s
+2024-12-13 14:36:00 | INFO     | logging:callHandlers:1706 - Shutting down application...
+2024-12-13 14:36:39 | INFO     | logging:callHandlers:1706 - Starting application...
+2024-12-13 14:36:39 | INFO     | backend.utils.model_loader:load_model:26 - Loading model: gpt-4-turbo-preview
+2024-12-13 14:36:40 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-13 14:36:40 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-13 14:36:40 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-13 14:36:40 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-13 14:36:40 | INFO     | backend.utils.model_loader:load_model:40 - Model gpt-4-turbo-preview loaded successfully
+2024-12-13 14:36:40 | INFO     | logging:callHandlers:1706 - Application startup complete
+2024-12-13 14:36:40 | INFO     | logging:callHandlers:1706 - Starting application...
+2024-12-13 14:36:40 | INFO     | logging:callHandlers:1706 - Application startup complete
+2024-12-13 14:36:57 | INFO     | logging:callHandlers:1706 - Request: GET /api/v1/playlists/metadata Status: 200 Duration: 0.00s
+2024-12-13 14:37:01 | INFO     | logging:callHandlers:1706 - Request: GET /api/v1/playlists/metadata Status: 200 Duration: 0.00s
+2024-12-13 14:37:01 | INFO     | logging:callHandlers:1706 - Request: GET /api/v1/playlists/PLUl4u3cNGP6083Y-NElqTRAgKtXQxgD3g/status Status: 200 Duration: 0.00s
+2024-12-13 14:37:01 | INFO     | logging:callHandlers:1706 - Request: POST /api/v1/playlists/process Status: 422 Duration: 0.00s
+2024-12-13 14:38:27 | INFO     | backend.api.endpoints.qa:question_answering:16 - Processing question: poker rules ...
+2024-12-13 14:38:27 | DEBUG    | logging:callHandlers:1706 - Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'json_data': {'messages': [{'role': 'system', 'content': 'You are a helpful educational assistant.'}, {'role': 'user', 'content': 'poker rules '}], 'model': 'gpt-4-turbo-preview', 'max_tokens': 150}}
+2024-12-13 14:38:27 | DEBUG    | logging:callHandlers:1706 - Sending HTTP Request: POST https://api.openai.com/v1/chat/completions
+2024-12-13 14:38:27 | DEBUG    | logging:callHandlers:1706 - connect_tcp.started host='api.openai.com' port=443 local_address=None timeout=5.0 socket_options=None
+2024-12-13 14:38:27 | DEBUG    | logging:callHandlers:1706 - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001F87DC66150>
+2024-12-13 14:38:27 | DEBUG    | logging:callHandlers:1706 - start_tls.started ssl_context=<ssl.SSLContext object at 0x000001F80BBAC950> server_hostname='api.openai.com' timeout=5.0
+2024-12-13 14:38:27 | DEBUG    | logging:callHandlers:1706 - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001F87DA20950>
+2024-12-13 14:38:27 | DEBUG    | logging:callHandlers:1706 - send_request_headers.started request=<Request [b'POST']>
+2024-12-13 14:38:27 | DEBUG    | logging:callHandlers:1706 - send_request_headers.complete
+2024-12-13 14:38:27 | DEBUG    | logging:callHandlers:1706 - send_request_body.started request=<Request [b'POST']>
+2024-12-13 14:38:27 | DEBUG    | logging:callHandlers:1706 - send_request_body.complete
+2024-12-13 14:38:27 | DEBUG    | logging:callHandlers:1706 - receive_response_headers.started request=<Request [b'POST']>
+2024-12-13 14:38:31 | DEBUG    | logging:callHandlers:1706 - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Fri, 13 Dec 2024 19:38:31 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-expose-headers', b'X-Request-ID'), (b'openai-organization', b'user-lo9rtdwrcomhygxvw5oumgll'), (b'openai-processing-ms', b'3697'), (b'openai-version', b'2020-10-01'), (b'x-ratelimit-limit-requests', b'500'), (b'x-ratelimit-limit-tokens', b'30000'), (b'x-ratelimit-remaining-requests', b'499'), (b'x-ratelimit-remaining-tokens', b'29835'), (b'x-ratelimit-reset-requests', b'120ms'), (b'x-ratelimit-reset-tokens', b'330ms'), (b'x-request-id', b'req_9dc63c8ebd4597db0a2604511ac67a31'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'CF-Cache-Status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=k9jujrWVQr0WKG849UxqEpk5E2C0Rhwak8ZjKkM8clE-1734118711-1.0.1.1-g92Lsz5.aSDwVz77HGBhViupOv4jt1L5WSkX.F2R6R5VHdA4X9kjAAEz6T07wonmREz3vokdpbnb_anhOhHniQ; path=/; expires=Fri, 13-Dec-24 20:08:31 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'X-Content-Type-Options', b'nosniff'), (b'Set-Cookie', b'_cfuvid=sqALj60SEOfZEHXxFwrjtxfhvWyV8mj..a6g3bPg2ms-1734118711790-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'8f186a24fa4c4cd2-BOS'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2024-12-13 14:38:31 | INFO     | logging:callHandlers:1706 - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-13 14:38:31 | DEBUG    | logging:callHandlers:1706 - receive_response_body.started request=<Request [b'POST']>
+2024-12-13 14:38:31 | DEBUG    | logging:callHandlers:1706 - receive_response_body.complete
+2024-12-13 14:38:31 | DEBUG    | logging:callHandlers:1706 - response_closed.started
+2024-12-13 14:38:31 | DEBUG    | logging:callHandlers:1706 - response_closed.complete
+2024-12-13 14:38:31 | DEBUG    | logging:callHandlers:1706 - HTTP Response: POST https://api.openai.com/v1/chat/completions "200 OK" Headers([('date', 'Fri, 13 Dec 2024 19:38:31 GMT'), ('content-type', 'application/json'), ('transfer-encoding', 'chunked'), ('connection', 'keep-alive'), ('access-control-expose-headers', 'X-Request-ID'), ('openai-organization', 'user-lo9rtdwrcomhygxvw5oumgll'), ('openai-processing-ms', '3697'), ('openai-version', '2020-10-01'), ('x-ratelimit-limit-requests', '500'), ('x-ratelimit-limit-tokens', '30000'), ('x-ratelimit-remaining-requests', '499'), ('x-ratelimit-remaining-tokens', '29835'), ('x-ratelimit-reset-requests', '120ms'), ('x-ratelimit-reset-tokens', '330ms'), ('x-request-id', 'req_9dc63c8ebd4597db0a2604511ac67a31'), ('strict-transport-security', 'max-age=31536000; includeSubDomains; preload'), ('cf-cache-status', 'DYNAMIC'), ('set-cookie', '__cf_bm=k9jujrWVQr0WKG849UxqEpk5E2C0Rhwak8ZjKkM8clE-1734118711-1.0.1.1-g92Lsz5.aSDwVz77HGBhViupOv4jt1L5WSkX.F2R6R5VHdA4X9kjAAEz6T07wonmREz3vokdpbnb_anhOhHniQ; path=/; expires=Fri, 13-Dec-24 20:08:31 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('x-content-type-options', 'nosniff'), ('set-cookie', '_cfuvid=sqALj60SEOfZEHXxFwrjtxfhvWyV8mj..a6g3bPg2ms-1734118711790-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('server', 'cloudflare'), ('cf-ray', '8f186a24fa4c4cd2-BOS'), ('content-encoding', 'gzip'), ('alt-svc', 'h3=":443"; ma=86400')])
+2024-12-13 14:38:31 | DEBUG    | logging:callHandlers:1706 - request_id: req_9dc63c8ebd4597db0a2604511ac67a31
+2024-12-13 14:38:31 | INFO     | backend.api.endpoints.qa:question_answering:29 - Answer generated successfully
+2024-12-13 14:38:31 | INFO     | logging:callHandlers:1706 - Request: POST /api/v1/qa Status: 200 Duration: 4.02s
+2024-12-13 14:38:34 | DEBUG    | logging:callHandlers:1706 - Starting summary generation for course: How to Win at Texas Hold'em Poker
+2024-12-13 14:38:34 | DEBUG    | logging:callHandlers:1706 - Retrieved BigQuery settings: {'GOOGLE_APPLICATION_CREDENTIALS': 'finalproject-442400-ff1f8be678f0.json', 'BIGQUERY_PROJECT_ID': 'finalproject-442400', 'BIGQUERY_DATASET': 'coursesdata', 'BIGQUERY_TABLE': 'Courses'}
+2024-12-13 14:38:34 | DEBUG    | logging:callHandlers:1706 - Initializing BigQuery client
+2024-12-13 14:38:34 | DEBUG    | logging:callHandlers:1706 - Checking finalproject-442400-ff1f8be678f0.json for explicit credentials as part of auth process...
+2024-12-13 14:38:34 | DEBUG    | logging:callHandlers:1706 - Checking finalproject-442400-ff1f8be678f0.json for explicit credentials as part of auth process...
+2024-12-13 14:38:35 | DEBUG    | logging:callHandlers:1706 - Executing query: 
+        SELECT title, description
+        FROM `finalproject-442400.coursesdata.Courses`
+        WHERE LOWER(title) = LOWER(@course_title)
+        OR playlist_id = @course_title
+        LIMIT 1
+        
+2024-12-13 14:38:35 | DEBUG    | logging:callHandlers:1706 - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-12-13 14:38:35 | DEBUG    | logging:callHandlers:1706 - Making request: POST https://oauth2.googleapis.com/token
+2024-12-13 14:38:35 | DEBUG    | logging:callHandlers:1706 - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-12-13 14:38:35 | DEBUG    | logging:callHandlers:1706 - https://oauth2.googleapis.com:443 "POST /token HTTP/11" 200 None
+2024-12-13 14:38:35 | DEBUG    | logging:callHandlers:1706 - Starting new HTTPS connection (1): bigquery.googleapis.com:443
+2024-12-13 14:38:35 | DEBUG    | logging:callHandlers:1706 - https://bigquery.googleapis.com:443 "POST /bigquery/v2/projects/finalproject-442400/jobs?prettyPrint=false HTTP/11" 200 None
+2024-12-13 14:38:35 | DEBUG    | logging:callHandlers:1706 - https://bigquery.googleapis.com:443 "GET /bigquery/v2/projects/finalproject-442400/queries/534d2a65-edda-49a6-81b7-a97b86d96585?maxResults=0&location=US&prettyPrint=false HTTP/11" 200 None
+2024-12-13 14:38:36 | DEBUG    | logging:callHandlers:1706 - https://bigquery.googleapis.com:443 "GET /bigquery/v2/projects/finalproject-442400/queries/534d2a65-edda-49a6-81b7-a97b86d96585?fields=jobReference%2CtotalRows%2CpageToken%2Crows&location=US&formatOptions.useInt64Timestamp=True&prettyPrint=false HTTP/11" 200 None
+2024-12-13 14:38:36 | INFO     | logging:callHandlers:1706 - Request: GET /api/v1/summarize/How to Win at Texas Hold'em Poker Status: 200 Duration: 1.22s
+2024-12-13 14:38:40 | INFO     | backend.api.endpoints.segments:get_segments:19 - Fetching segments for course: How to Win at Texas Hold'em Poker
+2024-12-13 14:38:40 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-13 14:38:40 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-13 14:38:41 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-13 14:38:41 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-13 14:38:41 | DEBUG    | logging:callHandlers:1706 - Checking finalproject-442400-ff1f8be678f0.json for explicit credentials as part of auth process...
+2024-12-13 14:38:41 | DEBUG    | logging:callHandlers:1706 - Checking finalproject-442400-ff1f8be678f0.json for explicit credentials as part of auth process...
+2024-12-13 14:38:41 | INFO     | backend.agents.topic_segmentation:_fetch_topics_from_bigquery:66 - Executing query for course: How_to_Win_at_Texas_Hold'em_Poker
+2024-12-13 14:38:41 | DEBUG    | logging:callHandlers:1706 - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-12-13 14:38:41 | DEBUG    | logging:callHandlers:1706 - Making request: POST https://oauth2.googleapis.com/token
+2024-12-13 14:38:41 | DEBUG    | logging:callHandlers:1706 - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-12-13 14:38:42 | DEBUG    | logging:callHandlers:1706 - https://oauth2.googleapis.com:443 "POST /token HTTP/11" 200 None
+2024-12-13 14:38:42 | DEBUG    | logging:callHandlers:1706 - Starting new HTTPS connection (1): bigquery.googleapis.com:443
+2024-12-13 14:38:42 | DEBUG    | logging:callHandlers:1706 - https://bigquery.googleapis.com:443 "POST /bigquery/v2/projects/finalproject-442400/jobs?prettyPrint=false HTTP/11" 200 None
+2024-12-13 14:38:42 | DEBUG    | logging:callHandlers:1706 - https://bigquery.googleapis.com:443 "GET /bigquery/v2/projects/finalproject-442400/queries/2571849b-1565-4407-adb1-d71d8ff59791?maxResults=0&location=US&prettyPrint=false HTTP/11" 200 None
+2024-12-13 14:38:42 | DEBUG    | logging:callHandlers:1706 - https://bigquery.googleapis.com:443 "GET /bigquery/v2/projects/finalproject-442400/queries/2571849b-1565-4407-adb1-d71d8ff59791?fields=jobReference%2CtotalRows%2CpageToken%2Crows&location=US&formatOptions.useInt64Timestamp=True&prettyPrint=false HTTP/11" 200 None
+2024-12-13 14:38:42 | INFO     | backend.agents.topic_segmentation:_fetch_topics_from_bigquery:80 - Found 5 topics
+2024-12-13 14:38:42 | INFO     | backend.agents.topic_segmentation:_process_implementation:119 - Generated 5 segments successfully
+2024-12-13 14:38:42 | INFO     | logging:callHandlers:1706 - Request: POST /api/v1/segments Status: 200 Duration: 1.88s
+2024-12-13 14:38:49 | INFO     | backend.api.endpoints.citation:generate_citation:22 - Generating citation for content: How to Win at Texas Hold'em Poker
+2024-12-13 14:38:49 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-13 14:38:49 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-13 14:38:49 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-13 14:38:49 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-13 14:38:50 | DEBUG    | logging:callHandlers:1706 - Checking finalproject-442400-ff1f8be678f0.json for explicit credentials as part of auth process...
+2024-12-13 14:38:50 | DEBUG    | logging:callHandlers:1706 - Checking finalproject-442400-ff1f8be678f0.json for explicit credentials as part of auth process...
+2024-12-13 14:38:50 | DEBUG    | backend.api.endpoints.citation:generate_citation:35 - Processing citation request...
+2024-12-13 14:38:50 | INFO     | backend.agents.citation:_fetch_urls_from_bigquery:96 - Executing query for course: How_to_Win_at_Texas_Hold'em_Poker
+2024-12-13 14:38:50 | DEBUG    | logging:callHandlers:1706 - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-12-13 14:38:50 | DEBUG    | logging:callHandlers:1706 - Making request: POST https://oauth2.googleapis.com/token
+2024-12-13 14:38:50 | DEBUG    | logging:callHandlers:1706 - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-12-13 14:38:50 | DEBUG    | logging:callHandlers:1706 - https://oauth2.googleapis.com:443 "POST /token HTTP/11" 200 None
+2024-12-13 14:38:50 | DEBUG    | logging:callHandlers:1706 - Starting new HTTPS connection (1): bigquery.googleapis.com:443
+2024-12-13 14:38:50 | DEBUG    | logging:callHandlers:1706 - https://bigquery.googleapis.com:443 "POST /bigquery/v2/projects/finalproject-442400/jobs?prettyPrint=false HTTP/11" 200 None
+2024-12-13 14:38:51 | DEBUG    | logging:callHandlers:1706 - https://bigquery.googleapis.com:443 "GET /bigquery/v2/projects/finalproject-442400/queries/cec38e97-4748-4b58-9bf0-51699a912475?maxResults=0&location=US&prettyPrint=false HTTP/11" 200 None
+2024-12-13 14:38:51 | DEBUG    | logging:callHandlers:1706 - https://bigquery.googleapis.com:443 "GET /bigquery/v2/projects/finalproject-442400/queries/cec38e97-4748-4b58-9bf0-51699a912475?fields=jobReference%2CtotalRows%2CpageToken%2Crows&location=US&formatOptions.useInt64Timestamp=True&prettyPrint=false HTTP/11" 200 None
+2024-12-13 14:38:51 | INFO     | backend.agents.citation:_fetch_urls_from_bigquery:109 - Found 5 citations
+2024-12-13 14:38:51 | INFO     | backend.agents.citation:_process_implementation:60 - Generated 5 citations successfully
+2024-12-13 14:38:51 | INFO     | backend.api.endpoints.citation:generate_citation:47 - Generated 5 citations successfully
+2024-12-13 14:38:51 | INFO     | logging:callHandlers:1706 - Request: POST /api/v1/citation/generate Status: 200 Duration: 1.90s
+2024-12-13 14:43:06 | INFO     | logging:callHandlers:1706 - Request: GET /api/v1/playlists/metadata Status: 200 Duration: 0.00s
+2024-12-13 14:43:10 | INFO     | logging:callHandlers:1706 - Request: GET /api/v1/playlists/metadata Status: 200 Duration: 0.00s
+2024-12-13 14:43:10 | INFO     | logging:callHandlers:1706 - Request: GET /api/v1/playlists/PLUl4u3cNGP6083Y-NElqTRAgKtXQxgD3g/status Status: 200 Duration: 0.00s
+2024-12-13 14:43:11 | INFO     | logging:callHandlers:1706 - Request: POST /api/v1/playlists/process Status: 422 Duration: 0.05s
+2024-12-13 14:43:18 | DEBUG    | logging:callHandlers:1706 - Starting summary generation for course: How to Win at Texas Hold'em Poker
+2024-12-13 14:43:18 | DEBUG    | logging:callHandlers:1706 - Retrieved BigQuery settings: {'GOOGLE_APPLICATION_CREDENTIALS': 'finalproject-442400-ff1f8be678f0.json', 'BIGQUERY_PROJECT_ID': 'finalproject-442400', 'BIGQUERY_DATASET': 'coursesdata', 'BIGQUERY_TABLE': 'Courses'}
+2024-12-13 14:43:18 | DEBUG    | logging:callHandlers:1706 - Initializing BigQuery client
+2024-12-13 14:43:18 | DEBUG    | logging:callHandlers:1706 - Checking finalproject-442400-ff1f8be678f0.json for explicit credentials as part of auth process...
+2024-12-13 14:43:18 | DEBUG    | logging:callHandlers:1706 - Checking finalproject-442400-ff1f8be678f0.json for explicit credentials as part of auth process...
+2024-12-13 14:43:18 | DEBUG    | logging:callHandlers:1706 - Executing query: 
+        SELECT title, description
+        FROM `finalproject-442400.coursesdata.Courses`
+        WHERE LOWER(title) = LOWER(@course_title)
+        OR playlist_id = @course_title
+        LIMIT 1
+        
+2024-12-13 14:43:18 | DEBUG    | logging:callHandlers:1706 - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-12-13 14:43:18 | DEBUG    | logging:callHandlers:1706 - Making request: POST https://oauth2.googleapis.com/token
+2024-12-13 14:43:18 | DEBUG    | logging:callHandlers:1706 - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-12-13 14:43:18 | DEBUG    | logging:callHandlers:1706 - https://oauth2.googleapis.com:443 "POST /token HTTP/11" 200 None
+2024-12-13 14:43:18 | DEBUG    | logging:callHandlers:1706 - Starting new HTTPS connection (1): bigquery.googleapis.com:443
+2024-12-13 14:43:19 | DEBUG    | logging:callHandlers:1706 - https://bigquery.googleapis.com:443 "POST /bigquery/v2/projects/finalproject-442400/jobs?prettyPrint=false HTTP/11" 200 None
+2024-12-13 14:43:19 | DEBUG    | logging:callHandlers:1706 - https://bigquery.googleapis.com:443 "GET /bigquery/v2/projects/finalproject-442400/queries/58ae3dae-7b19-4505-8027-98958d544b43?maxResults=0&location=US&prettyPrint=false HTTP/11" 200 None
+2024-12-13 14:43:19 | DEBUG    | logging:callHandlers:1706 - https://bigquery.googleapis.com:443 "GET /bigquery/v2/projects/finalproject-442400/queries/58ae3dae-7b19-4505-8027-98958d544b43?fields=jobReference%2CtotalRows%2CpageToken%2Crows&location=US&formatOptions.useInt64Timestamp=True&prettyPrint=false HTTP/11" 200 None
+2024-12-13 14:43:19 | INFO     | logging:callHandlers:1706 - Request: GET /api/v1/summarize/How to Win at Texas Hold'em Poker Status: 200 Duration: 1.14s
+2024-12-13 14:43:24 | INFO     | backend.api.endpoints.segments:get_segments:19 - Fetching segments for course: How to Win at Texas Hold'em Poker
+2024-12-13 14:43:24 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-13 14:43:24 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-13 14:43:24 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-13 14:43:24 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-13 14:43:25 | DEBUG    | logging:callHandlers:1706 - Checking finalproject-442400-ff1f8be678f0.json for explicit credentials as part of auth process...
+2024-12-13 14:43:25 | DEBUG    | logging:callHandlers:1706 - Checking finalproject-442400-ff1f8be678f0.json for explicit credentials as part of auth process...
+2024-12-13 14:43:25 | INFO     | backend.agents.topic_segmentation:_fetch_topics_from_bigquery:66 - Executing query for course: How_to_Win_at_Texas_Hold'em_Poker
+2024-12-13 14:43:25 | DEBUG    | logging:callHandlers:1706 - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-12-13 14:43:25 | DEBUG    | logging:callHandlers:1706 - Making request: POST https://oauth2.googleapis.com/token
+2024-12-13 14:43:25 | DEBUG    | logging:callHandlers:1706 - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-12-13 14:43:25 | DEBUG    | logging:callHandlers:1706 - https://oauth2.googleapis.com:443 "POST /token HTTP/11" 200 None
+2024-12-13 14:43:25 | DEBUG    | logging:callHandlers:1706 - Starting new HTTPS connection (1): bigquery.googleapis.com:443
+2024-12-13 14:43:25 | DEBUG    | logging:callHandlers:1706 - https://bigquery.googleapis.com:443 "POST /bigquery/v2/projects/finalproject-442400/jobs?prettyPrint=false HTTP/11" 200 None
+2024-12-13 14:43:25 | DEBUG    | logging:callHandlers:1706 - https://bigquery.googleapis.com:443 "GET /bigquery/v2/projects/finalproject-442400/queries/b7a73d51-5589-4d9f-94f8-802b8fda813d?maxResults=0&location=US&prettyPrint=false HTTP/11" 200 None
+2024-12-13 14:43:26 | DEBUG    | logging:callHandlers:1706 - https://bigquery.googleapis.com:443 "GET /bigquery/v2/projects/finalproject-442400/queries/b7a73d51-5589-4d9f-94f8-802b8fda813d?fields=jobReference%2CtotalRows%2CpageToken%2Crows&location=US&formatOptions.useInt64Timestamp=True&prettyPrint=false HTTP/11" 200 None
+2024-12-13 14:43:26 | INFO     | backend.agents.topic_segmentation:_fetch_topics_from_bigquery:80 - Found 5 topics
+2024-12-13 14:43:26 | INFO     | backend.agents.topic_segmentation:_process_implementation:119 - Generated 5 segments successfully
+2024-12-13 14:43:26 | INFO     | logging:callHandlers:1706 - Request: POST /api/v1/segments Status: 200 Duration: 2.10s
+2024-12-13 14:44:32 | INFO     | logging:callHandlers:1706 - Request: GET /api/v1/playlists/metadata Status: 200 Duration: 0.00s
+2024-12-13 14:44:35 | INFO     | logging:callHandlers:1706 - Request: GET /api/v1/playlists/metadata Status: 200 Duration: 0.00s
+2024-12-13 14:44:36 | INFO     | logging:callHandlers:1706 - Request: GET /api/v1/playlists/PLUl4u3cNGP6083Y-NElqTRAgKtXQxgD3g/status Status: 200 Duration: 0.00s
+2024-12-13 14:44:36 | INFO     | logging:callHandlers:1706 - Request: POST /api/v1/playlists/process Status: 422 Duration: 0.00s
+2024-12-13 14:44:57 | INFO     | logging:callHandlers:1706 - Request: GET /api/v1/playlists/metadata Status: 200 Duration: 0.00s
+2024-12-13 14:45:00 | INFO     | logging:callHandlers:1706 - Request: GET /api/v1/playlists/metadata Status: 200 Duration: 0.00s
+2024-12-13 14:45:00 | INFO     | logging:callHandlers:1706 - Request: GET /api/v1/playlists/PLUl4u3cNGP6083Y-NElqTRAgKtXQxgD3g/status Status: 200 Duration: 0.00s
+2024-12-13 14:45:00 | INFO     | logging:callHandlers:1706 - Request: POST /api/v1/playlists/process Status: 422 Duration: 0.00s
+2024-12-13 14:45:18 | INFO     | logging:callHandlers:1706 - Request: GET /api/v1/playlists/metadata Status: 200 Duration: 0.00s
+2024-12-13 14:45:51 | INFO     | logging:callHandlers:1706 - Shutting down application...
