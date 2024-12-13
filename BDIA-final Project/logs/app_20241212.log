@@ -1,0 +1,510 @@
+2024-12-12 05:28:47 | INFO     | backend.app.main:startup_event:109 - Starting application...
+2024-12-12 05:28:47 | INFO     | backend.app.main:startup_event:112 - Loading models and initializing resources...
+2024-12-12 05:28:47 | INFO     | backend.app.main:startup_event:119 - Application startup complete
+2024-12-12 05:28:55 | INFO     | backend.app.main:shutdown_event:126 - Shutting down application...
+2024-12-12 05:28:58 | INFO     | backend.app.main:startup_event:109 - Starting application...
+2024-12-12 05:28:58 | INFO     | backend.app.main:startup_event:112 - Loading models and initializing resources...
+2024-12-12 05:28:58 | INFO     | backend.app.main:startup_event:119 - Application startup complete
+2024-12-12 05:29:38 | INFO     | backend.app.main:shutdown_event:126 - Shutting down application...
+2024-12-12 05:29:42 | INFO     | backend.app.main:startup_event:109 - Starting application...
+2024-12-12 05:29:42 | INFO     | backend.app.main:startup_event:112 - Loading models and initializing resources...
+2024-12-12 05:29:42 | INFO     | backend.app.main:startup_event:119 - Application startup complete
+2024-12-12 05:31:22 | INFO     | backend.app.main:shutdown_event:126 - Shutting down application...
+2024-12-12 05:41:43 | INFO     | backend.app.main:startup_event:110 - Starting application...
+2024-12-12 05:41:43 | INFO     | backend.utils.model_loader:load_model:26 - Loading model: gpt-4-turbo-preview
+2024-12-12 05:41:43 | ERROR    | backend.utils.model_loader:load_model:44 - Error loading model gpt-4-turbo-preview: 'Settings' object has no attribute 'openai_api_key'
+2024-12-12 05:41:43 | ERROR    | backend.app.main:startup_event:117 - Error during startup: 'Settings' object has no attribute 'openai_api_key'
+2024-12-12 05:42:49 | INFO     | backend.app.main:startup_event:110 - Starting application...
+2024-12-12 05:42:49 | INFO     | backend.utils.model_loader:load_model:26 - Loading model: gpt-4-turbo-preview
+2024-12-12 05:42:49 | ERROR    | backend.utils.model_loader:load_model:44 - Error loading model gpt-4-turbo-preview: 'Settings' object has no attribute 'openai_api_key'
+2024-12-12 05:42:49 | ERROR    | backend.app.main:startup_event:117 - Error during startup: 'Settings' object has no attribute 'openai_api_key'
+2024-12-12 05:42:55 | INFO     | backend.app.main:startup_event:110 - Starting application...
+2024-12-12 05:42:55 | INFO     | backend.utils.model_loader:load_model:26 - Loading model: gpt-4-turbo-preview
+2024-12-12 05:42:55 | ERROR    | backend.utils.model_loader:load_model:44 - Error loading model gpt-4-turbo-preview: 'Settings' object has no attribute 'openai_api_key'
+2024-12-12 05:42:55 | ERROR    | backend.app.main:startup_event:117 - Error during startup: 'Settings' object has no attribute 'openai_api_key'
+2024-12-12 05:44:23 | INFO     | backend.app.main:startup_event:110 - Starting application...
+2024-12-12 05:44:23 | INFO     | backend.utils.model_loader:load_model:26 - Loading model: gpt-4-turbo-preview
+2024-12-12 05:44:23 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 05:44:23 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 05:44:24 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 05:44:24 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 05:44:24 | INFO     | backend.utils.model_loader:load_model:40 - Model gpt-4-turbo-preview loaded successfully
+2024-12-12 05:44:24 | INFO     | backend.app.main:startup_event:115 - Application startup complete
+2024-12-12 05:45:22 | INFO     | backend.app.main:log_requests:30 - Request: GET / Status: 200 Duration: 0.00s
+2024-12-12 05:45:23 | INFO     | backend.app.main:log_requests:30 - Request: GET / Status: 200 Duration: 0.00s
+2024-12-12 05:45:32 | INFO     | backend.app.main:shutdown_event:122 - Shutting down application...
+2024-12-12 05:50:01 | INFO     | backend.app.main:startup_event:110 - Starting application...
+2024-12-12 05:50:01 | INFO     | backend.utils.model_loader:load_model:26 - Loading model: gpt-4-turbo-preview
+2024-12-12 05:50:01 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 05:50:01 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 05:50:02 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 05:50:02 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 05:50:02 | INFO     | backend.utils.model_loader:load_model:40 - Model gpt-4-turbo-preview loaded successfully
+2024-12-12 05:50:02 | INFO     | backend.app.main:startup_event:115 - Application startup complete
+2024-12-12 05:50:16 | INFO     | backend.app.main:log_requests:30 - Request: GET / Status: 200 Duration: 0.01s
+2024-12-12 05:50:16 | INFO     | backend.app.main:log_requests:30 - Request: GET /favicon.ico Status: 404 Duration: 0.00s
+2024-12-12 05:50:29 | INFO     | backend.app.main:log_requests:30 - Request: GET / Status: 200 Duration: 0.00s
+2024-12-12 05:50:33 | INFO     | backend.app.main:log_requests:30 - Request: GET / Status: 200 Duration: 0.00s
+2024-12-12 05:50:45 | INFO     | backend.app.main:shutdown_event:122 - Shutting down application...
+2024-12-12 15:39:45 | INFO     | backend.app.main:startup_event:110 - Starting application...
+2024-12-12 15:39:45 | INFO     | backend.utils.model_loader:load_model:26 - Loading model: gpt-4-turbo-preview
+2024-12-12 15:39:45 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 15:39:45 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 15:39:45 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 15:39:45 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 15:39:46 | INFO     | backend.utils.model_loader:load_model:40 - Model gpt-4-turbo-preview loaded successfully
+2024-12-12 15:39:46 | INFO     | backend.app.main:startup_event:115 - Application startup complete
+2024-12-12 15:39:46 | INFO     | backend.app.main:shutdown_event:122 - Shutting down application...
+2024-12-12 15:39:53 | INFO     | backend.app.main:startup_event:110 - Starting application...
+2024-12-12 15:39:53 | INFO     | backend.utils.model_loader:load_model:26 - Loading model: gpt-4-turbo-preview
+2024-12-12 15:39:53 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 15:39:53 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 15:39:54 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 15:39:54 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 15:39:54 | INFO     | backend.utils.model_loader:load_model:40 - Model gpt-4-turbo-preview loaded successfully
+2024-12-12 15:39:54 | INFO     | backend.app.main:startup_event:115 - Application startup complete
+2024-12-12 15:41:58 | INFO     | backend.app.main:shutdown_event:122 - Shutting down application...
+2024-12-12 15:42:06 | INFO     | backend.app.main:startup_event:110 - Starting application...
+2024-12-12 15:42:06 | INFO     | backend.utils.model_loader:load_model:26 - Loading model: gpt-4-turbo-preview
+2024-12-12 15:42:06 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 15:42:06 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 15:42:07 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 15:42:07 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 15:42:07 | INFO     | backend.utils.model_loader:load_model:40 - Model gpt-4-turbo-preview loaded successfully
+2024-12-12 15:42:07 | INFO     | backend.app.main:startup_event:115 - Application startup complete
+2024-12-12 15:42:07 | INFO     | backend.app.main:shutdown_event:122 - Shutting down application...
+2024-12-12 15:42:13 | INFO     | backend.app.main:startup_event:110 - Starting application...
+2024-12-12 15:42:13 | INFO     | backend.utils.model_loader:load_model:26 - Loading model: gpt-4-turbo-preview
+2024-12-12 15:42:13 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 15:42:13 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 15:42:13 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 15:42:13 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 15:42:14 | INFO     | backend.utils.model_loader:load_model:40 - Model gpt-4-turbo-preview loaded successfully
+2024-12-12 15:42:14 | INFO     | backend.app.main:startup_event:115 - Application startup complete
+2024-12-12 15:42:29 | INFO     | backend.app.main:shutdown_event:122 - Shutting down application...
+2024-12-12 15:42:38 | INFO     | backend.app.main:startup_event:110 - Starting application...
+2024-12-12 15:42:38 | INFO     | backend.utils.model_loader:load_model:26 - Loading model: gpt-4-turbo-preview
+2024-12-12 15:42:38 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 15:42:38 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 15:42:38 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 15:42:38 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 15:42:39 | INFO     | backend.utils.model_loader:load_model:40 - Model gpt-4-turbo-preview loaded successfully
+2024-12-12 15:42:39 | INFO     | backend.app.main:startup_event:115 - Application startup complete
+2024-12-12 15:43:11 | INFO     | backend.app.main:log_requests:30 - Request: GET /api/v1/playlists/metadata Status: 404 Duration: 0.00s
+2024-12-12 15:43:16 | INFO     | backend.app.main:log_requests:30 - Request: GET /api/v1/playlists/metadata Status: 404 Duration: 0.00s
+2024-12-12 15:43:16 | INFO     | backend.app.main:log_requests:30 - Request: GET /api/v1/playlists/PLUl4u3cNGP62K2DjQLRxDNRi0z2IRWnNh/status Status: 403 Duration: 0.00s
+2024-12-12 15:45:41 | INFO     | backend.app.main:log_requests:30 - Request: GET /api/v1/notes/PLUl4u3cNGP62K2DjQLRxDNRi0z2IRWnNh Status: 404 Duration: 0.00s
+2024-12-12 15:45:43 | INFO     | backend.app.main:log_requests:30 - Request: GET /api/v1/playlists/PLUl4u3cNGP62K2DjQLRxDNRi0z2IRWnNh/segments Status: 404 Duration: 0.00s
+2024-12-12 15:45:45 | INFO     | backend.app.main:log_requests:30 - Request: GET /api/v1/notes/PLUl4u3cNGP62K2DjQLRxDNRi0z2IRWnNh Status: 404 Duration: 0.00s
+2024-12-12 15:45:46 | INFO     | backend.app.main:log_requests:30 - Request: GET /api/v1/citations/PLUl4u3cNGP62K2DjQLRxDNRi0z2IRWnNh Status: 404 Duration: 0.00s
+2024-12-12 15:45:52 | INFO     | backend.app.main:log_requests:30 - Request: POST /api/v1/qa Status: 404 Duration: 0.00s
+2024-12-12 15:45:55 | INFO     | backend.app.main:log_requests:30 - Request: GET /api/v1/notes/PLUl4u3cNGP62K2DjQLRxDNRi0z2IRWnNh Status: 404 Duration: 0.00s
+2024-12-12 15:49:05 | INFO     | backend.app.main:shutdown_event:122 - Shutting down application...
+2024-12-12 15:57:24 | INFO     | backend.app.main:startup_event:111 - Starting application...
+2024-12-12 15:57:24 | INFO     | backend.utils.model_loader:load_model:26 - Loading model: gpt-4-turbo-preview
+2024-12-12 15:57:24 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 15:57:24 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 15:57:25 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 15:57:25 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 15:57:25 | INFO     | backend.utils.model_loader:load_model:40 - Model gpt-4-turbo-preview loaded successfully
+2024-12-12 15:57:25 | INFO     | backend.app.main:startup_event:116 - Application startup complete
+2024-12-12 15:57:48 | INFO     | backend.app.main:log_requests:30 - Request: GET /api/v1/playlists/metadata Status: 403 Duration: 0.00s
+2024-12-12 15:57:52 | INFO     | backend.app.main:log_requests:30 - Request: GET /api/v1/playlists/metadata Status: 403 Duration: 0.00s
+2024-12-12 15:57:52 | INFO     | backend.app.main:log_requests:30 - Request: GET /api/v1/playlists/PLUl4u3cNGP62K2DjQLRxDNRi0z2IRWnNh/status Status: 403 Duration: 0.00s
+2024-12-12 15:58:02 | INFO     | backend.app.main:log_requests:30 - Request: GET /api/v1/notes/PLUl4u3cNGP62K2DjQLRxDNRi0z2IRWnNh Status: 403 Duration: 0.00s
+2024-12-12 15:59:03 | INFO     | backend.app.main:log_requests:30 - Request: GET /api/v1/playlists/PLUl4u3cNGP62K2DjQLRxDNRi0z2IRWnNh/segments Status: 403 Duration: 0.00s
+2024-12-12 15:59:04 | INFO     | backend.app.main:log_requests:30 - Request: GET /api/v1/notes/PLUl4u3cNGP62K2DjQLRxDNRi0z2IRWnNh Status: 403 Duration: 0.00s
+2024-12-12 15:59:06 | INFO     | backend.app.main:log_requests:30 - Request: GET /api/v1/citations/PLUl4u3cNGP62K2DjQLRxDNRi0z2IRWnNh Status: 404 Duration: 0.00s
+2024-12-12 15:59:19 | INFO     | backend.app.main:log_requests:30 - Request: POST /api/v1/qa Status: 403 Duration: 0.00s
+2024-12-12 15:59:44 | INFO     | backend.app.main:shutdown_event:123 - Shutting down application...
+2024-12-12 16:04:14 | INFO     | backend.app.main:startup_event:116 - Starting application...
+2024-12-12 16:04:14 | INFO     | backend.utils.model_loader:load_model:26 - Loading model: gpt-4-turbo-preview
+2024-12-12 16:04:14 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 16:04:14 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 16:04:15 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 16:04:15 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 16:04:15 | INFO     | backend.utils.model_loader:load_model:40 - Model gpt-4-turbo-preview loaded successfully
+2024-12-12 16:04:15 | INFO     | backend.app.main:startup_event:121 - Application startup complete
+2024-12-12 16:04:38 | INFO     | backend.app.main:log_requests:30 - Request: GET /api/v1/playlists/metadata Status: 200 Duration: 0.00s
+2024-12-12 16:04:42 | INFO     | backend.app.main:log_requests:30 - Request: GET /api/v1/playlists/metadata Status: 200 Duration: 0.00s
+2024-12-12 16:04:42 | INFO     | backend.app.main:log_requests:30 - Request: GET /api/v1/playlists/PLUl4u3cNGP62K2DjQLRxDNRi0z2IRWnNh/status Status: 200 Duration: 0.00s
+2024-12-12 16:04:43 | INFO     | backend.app.main:log_requests:30 - Request: POST /api/v1/playlists/process Status: 404 Duration: 0.00s
+2024-12-12 16:04:50 | ERROR    | backend.app.main:global_exception_handler:139 - Global error: 'StateManager' object has no attribute '_notify_error_handlers'
+2024-12-12 16:07:55 | INFO     | backend.app.main:shutdown_event:128 - Shutting down application...
+2024-12-12 16:08:00 | INFO     | backend.app.main:startup_event:116 - Starting application...
+2024-12-12 16:08:00 | INFO     | backend.utils.model_loader:load_model:26 - Loading model: gpt-4-turbo-preview
+2024-12-12 16:08:00 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 16:08:00 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 16:08:00 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 16:08:00 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 16:08:01 | INFO     | backend.utils.model_loader:load_model:40 - Model gpt-4-turbo-preview loaded successfully
+2024-12-12 16:08:01 | INFO     | backend.app.main:startup_event:121 - Application startup complete
+2024-12-12 16:08:23 | INFO     | backend.app.main:shutdown_event:128 - Shutting down application...
+2024-12-12 16:08:27 | INFO     | backend.app.main:startup_event:116 - Starting application...
+2024-12-12 16:08:27 | INFO     | backend.utils.model_loader:load_model:26 - Loading model: gpt-4-turbo-preview
+2024-12-12 16:08:27 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 16:08:27 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 16:08:28 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 16:08:28 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 16:08:29 | INFO     | backend.utils.model_loader:load_model:40 - Model gpt-4-turbo-preview loaded successfully
+2024-12-12 16:08:29 | INFO     | backend.app.main:startup_event:121 - Application startup complete
+2024-12-12 16:08:29 | INFO     | backend.app.main:shutdown_event:128 - Shutting down application...
+2024-12-12 16:08:35 | INFO     | backend.app.main:startup_event:116 - Starting application...
+2024-12-12 16:08:35 | INFO     | backend.utils.model_loader:load_model:26 - Loading model: gpt-4-turbo-preview
+2024-12-12 16:08:35 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 16:08:35 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 16:08:35 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 16:08:35 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 16:08:36 | INFO     | backend.utils.model_loader:load_model:40 - Model gpt-4-turbo-preview loaded successfully
+2024-12-12 16:08:36 | INFO     | backend.app.main:startup_event:121 - Application startup complete
+2024-12-12 16:09:47 | INFO     | backend.app.main:shutdown_event:128 - Shutting down application...
+2024-12-12 16:10:19 | INFO     | backend.app.main:startup_event:116 - Starting application...
+2024-12-12 16:10:19 | INFO     | backend.utils.model_loader:load_model:26 - Loading model: gpt-4-turbo-preview
+2024-12-12 16:10:19 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 16:10:19 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 16:10:20 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 16:10:20 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 16:10:21 | INFO     | backend.utils.model_loader:load_model:40 - Model gpt-4-turbo-preview loaded successfully
+2024-12-12 16:10:21 | INFO     | backend.app.main:startup_event:121 - Application startup complete
+2024-12-12 16:10:44 | INFO     | backend.app.main:shutdown_event:128 - Shutting down application...
+2024-12-12 16:10:50 | INFO     | backend.app.main:startup_event:116 - Starting application...
+2024-12-12 16:10:50 | INFO     | backend.utils.model_loader:load_model:26 - Loading model: gpt-4-turbo-preview
+2024-12-12 16:10:50 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 16:10:50 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 16:10:51 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 16:10:51 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 16:10:51 | INFO     | backend.utils.model_loader:load_model:40 - Model gpt-4-turbo-preview loaded successfully
+2024-12-12 16:10:51 | INFO     | backend.app.main:startup_event:121 - Application startup complete
+2024-12-12 16:12:06 | INFO     | backend.app.main:shutdown_event:128 - Shutting down application...
+2024-12-12 16:12:09 | INFO     | backend.app.main:startup_event:116 - Starting application...
+2024-12-12 16:12:09 | INFO     | backend.utils.model_loader:load_model:26 - Loading model: gpt-4-turbo-preview
+2024-12-12 16:12:09 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 16:12:09 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 16:12:09 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 16:12:09 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 16:12:10 | INFO     | backend.utils.model_loader:load_model:40 - Model gpt-4-turbo-preview loaded successfully
+2024-12-12 16:12:10 | INFO     | backend.app.main:startup_event:121 - Application startup complete
+2024-12-12 16:12:20 | INFO     | backend.app.main:shutdown_event:128 - Shutting down application...
+2024-12-12 16:12:24 | INFO     | backend.app.main:startup_event:116 - Starting application...
+2024-12-12 16:12:24 | INFO     | backend.utils.model_loader:load_model:26 - Loading model: gpt-4-turbo-preview
+2024-12-12 16:12:24 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 16:12:24 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 16:12:24 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 16:12:24 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 16:12:25 | INFO     | backend.utils.model_loader:load_model:40 - Model gpt-4-turbo-preview loaded successfully
+2024-12-12 16:12:25 | INFO     | backend.app.main:startup_event:121 - Application startup complete
+2024-12-12 16:12:35 | INFO     | backend.app.main:shutdown_event:128 - Shutting down application...
+2024-12-12 16:12:39 | INFO     | backend.app.main:startup_event:115 - Starting application...
+2024-12-12 16:12:39 | INFO     | backend.utils.model_loader:load_model:26 - Loading model: gpt-4-turbo-preview
+2024-12-12 16:12:39 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 16:12:39 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 16:12:39 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 16:12:39 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 16:12:40 | INFO     | backend.utils.model_loader:load_model:40 - Model gpt-4-turbo-preview loaded successfully
+2024-12-12 16:12:40 | INFO     | backend.app.main:startup_event:120 - Application startup complete
+2024-12-12 16:12:40 | INFO     | backend.app.main:shutdown_event:127 - Shutting down application...
+2024-12-12 16:12:44 | INFO     | backend.app.main:startup_event:115 - Starting application...
+2024-12-12 16:12:44 | INFO     | backend.utils.model_loader:load_model:26 - Loading model: gpt-4-turbo-preview
+2024-12-12 16:12:44 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 16:12:44 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 16:12:44 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 16:12:44 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 16:12:44 | INFO     | backend.utils.model_loader:load_model:40 - Model gpt-4-turbo-preview loaded successfully
+2024-12-12 16:12:44 | INFO     | backend.app.main:startup_event:120 - Application startup complete
+2024-12-12 16:12:58 | INFO     | backend.app.main:log_requests:30 - Request: GET /api/v1/playlists/metadata Status: 200 Duration: 0.00s
+2024-12-12 16:13:02 | INFO     | backend.app.main:log_requests:30 - Request: GET /api/v1/playlists/metadata Status: 200 Duration: 0.00s
+2024-12-12 16:13:02 | INFO     | backend.app.main:log_requests:30 - Request: GET /api/v1/playlists/PLUl4u3cNGP62K2DjQLRxDNRi0z2IRWnNh/status Status: 200 Duration: 0.00s
+2024-12-12 16:13:02 | INFO     | backend.app.main:log_requests:30 - Request: POST /api/v1/playlists/process Status: 422 Duration: 0.00s
+2024-12-12 16:13:14 | INFO     | backend.app.main:log_requests:30 - Request: GET /api/v1/playlists/PLUl4u3cNGP62K2DjQLRxDNRi0z2IRWnNh/segments Status: 200 Duration: 0.00s
+2024-12-12 16:14:25 | INFO     | backend.app.main:log_requests:30 - Request: GET /api/v1/citations/PLUl4u3cNGP62K2DjQLRxDNRi0z2IRWnNh Status: 404 Duration: 0.00s
+2024-12-12 16:21:23 | INFO     | backend.app.main:shutdown_event:127 - Shutting down application...
+2024-12-12 16:21:28 | INFO     | backend.app.main:startup_event:115 - Starting application...
+2024-12-12 16:21:28 | INFO     | backend.utils.model_loader:load_model:26 - Loading model: gpt-4-turbo-preview
+2024-12-12 16:21:28 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 16:21:28 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 16:21:28 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 16:21:28 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 16:21:29 | INFO     | backend.utils.model_loader:load_model:40 - Model gpt-4-turbo-preview loaded successfully
+2024-12-12 16:21:29 | INFO     | backend.app.main:startup_event:120 - Application startup complete
+2024-12-12 16:21:38 | INFO     | backend.app.main:shutdown_event:127 - Shutting down application...
+2024-12-12 16:21:44 | INFO     | backend.app.main:startup_event:115 - Starting application...
+2024-12-12 16:21:44 | INFO     | backend.utils.model_loader:load_model:26 - Loading model: gpt-4-turbo-preview
+2024-12-12 16:21:44 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 16:21:44 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 16:21:44 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 16:21:44 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 16:21:45 | INFO     | backend.utils.model_loader:load_model:40 - Model gpt-4-turbo-preview loaded successfully
+2024-12-12 16:21:45 | INFO     | backend.app.main:startup_event:120 - Application startup complete
+2024-12-12 19:25:40 | INFO     | backend.app.main:shutdown_event:127 - Shutting down application...
+2024-12-12 19:44:15 | INFO     | backend.app.main:startup_event:115 - Starting application...
+2024-12-12 19:44:15 | INFO     | backend.utils.model_loader:load_model:26 - Loading model: gpt-4-turbo-preview
+2024-12-12 19:44:15 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 19:44:15 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 19:44:15 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 19:44:15 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 19:44:15 | INFO     | backend.utils.model_loader:load_model:40 - Model gpt-4-turbo-preview loaded successfully
+2024-12-12 19:44:15 | INFO     | backend.app.main:startup_event:120 - Application startup complete
+2024-12-12 20:00:59 | INFO     | backend.app.main:startup_event:115 - Starting application...
+2024-12-12 20:00:59 | INFO     | backend.utils.model_loader:load_model:26 - Loading model: gpt-4-turbo-preview
+2024-12-12 20:00:59 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 20:00:59 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 20:01:00 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 20:01:00 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 20:01:00 | INFO     | backend.utils.model_loader:load_model:40 - Model gpt-4-turbo-preview loaded successfully
+2024-12-12 20:01:00 | INFO     | backend.app.main:startup_event:120 - Application startup complete
+2024-12-12 20:03:20 | INFO     | backend.app.main:log_requests:30 - Request: GET /api/v1/playlists/metadata Status: 200 Duration: 0.00s
+2024-12-12 20:03:25 | INFO     | backend.app.main:log_requests:30 - Request: GET /api/v1/playlists/metadata Status: 200 Duration: 0.00s
+2024-12-12 20:03:25 | INFO     | backend.app.main:log_requests:30 - Request: GET /api/v1/playlists/PLUl4u3cNGP62K2DjQLRxDNRi0z2IRWnNh/status Status: 200 Duration: 0.00s
+2024-12-12 20:03:26 | INFO     | backend.app.main:log_requests:30 - Request: POST /api/v1/playlists/process Status: 422 Duration: 0.00s
+2024-12-12 20:03:31 | INFO     | backend.app.main:log_requests:30 - Request: GET /api/v1/playlists/PLUl4u3cNGP62K2DjQLRxDNRi0z2IRWnNh/segments Status: 200 Duration: 0.00s
+2024-12-12 20:14:20 | INFO     | backend.app.main:shutdown_event:127 - Shutting down application...
+2024-12-12 20:14:25 | INFO     | backend.app.main:startup_event:115 - Starting application...
+2024-12-12 20:14:25 | INFO     | backend.utils.model_loader:load_model:26 - Loading model: gpt-4-turbo-preview
+2024-12-12 20:14:25 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 20:14:25 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 20:14:25 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 20:14:25 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 20:14:26 | INFO     | backend.utils.model_loader:load_model:40 - Model gpt-4-turbo-preview loaded successfully
+2024-12-12 20:14:26 | INFO     | backend.app.main:startup_event:120 - Application startup complete
+2024-12-12 20:18:49 | INFO     | backend.app.main:log_requests:30 - Request: GET /api/v1/playlists/PLUl4u3cNGP62K2DjQLRxDNRi0z2IRWnNh/segments Status: 200 Duration: 0.00s
+2024-12-12 20:18:54 | INFO     | backend.app.main:log_requests:30 - Request: GET /api/v1/citations/PLUl4u3cNGP62K2DjQLRxDNRi0z2IRWnNh Status: 404 Duration: 0.00s
+2024-12-12 20:22:09 | INFO     | backend.app.main:shutdown_event:127 - Shutting down application...
+2024-12-12 20:22:13 | INFO     | backend.app.main:startup_event:115 - Starting application...
+2024-12-12 20:22:13 | INFO     | backend.utils.model_loader:load_model:26 - Loading model: gpt-4-turbo-preview
+2024-12-12 20:22:13 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 20:22:13 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 20:22:14 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 20:22:14 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 20:22:14 | INFO     | backend.utils.model_loader:load_model:40 - Model gpt-4-turbo-preview loaded successfully
+2024-12-12 20:22:14 | INFO     | backend.app.main:startup_event:120 - Application startup complete
+2024-12-12 20:23:30 | INFO     | backend.app.main:shutdown_event:127 - Shutting down application...
+2024-12-12 20:23:35 | INFO     | backend.app.main:startup_event:115 - Starting application...
+2024-12-12 20:23:35 | INFO     | backend.utils.model_loader:load_model:26 - Loading model: gpt-4-turbo-preview
+2024-12-12 20:23:35 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 20:23:35 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 20:23:36 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 20:23:36 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 20:23:36 | INFO     | backend.utils.model_loader:load_model:40 - Model gpt-4-turbo-preview loaded successfully
+2024-12-12 20:23:36 | INFO     | backend.app.main:startup_event:120 - Application startup complete
+2024-12-12 20:24:04 | INFO     | backend.app.main:shutdown_event:127 - Shutting down application...
+2024-12-12 20:24:08 | INFO     | backend.app.main:startup_event:118 - Starting application...
+2024-12-12 20:24:08 | INFO     | backend.utils.model_loader:load_model:26 - Loading model: gpt-4-turbo-preview
+2024-12-12 20:24:08 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 20:24:08 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 20:24:09 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 20:24:09 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 20:24:10 | INFO     | backend.utils.model_loader:load_model:40 - Model gpt-4-turbo-preview loaded successfully
+2024-12-12 20:24:10 | INFO     | backend.app.main:startup_event:123 - Application startup complete
+2024-12-12 20:24:10 | INFO     | backend.app.main:shutdown_event:130 - Shutting down application...
+2024-12-12 20:24:17 | INFO     | backend.app.main:startup_event:118 - Starting application...
+2024-12-12 20:24:17 | INFO     | backend.utils.model_loader:load_model:26 - Loading model: gpt-4-turbo-preview
+2024-12-12 20:24:17 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 20:24:17 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 20:24:18 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 20:24:18 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 20:24:18 | INFO     | backend.utils.model_loader:load_model:40 - Model gpt-4-turbo-preview loaded successfully
+2024-12-12 20:24:18 | INFO     | backend.app.main:startup_event:123 - Application startup complete
+2024-12-12 20:32:18 | INFO     | backend.app.main:shutdown_event:130 - Shutting down application...
+2024-12-12 20:32:21 | INFO     | backend.app.main:startup_event:118 - Starting application...
+2024-12-12 20:32:21 | INFO     | backend.utils.model_loader:load_model:26 - Loading model: gpt-4-turbo-preview
+2024-12-12 20:32:21 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 20:32:21 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 20:32:22 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 20:32:22 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 20:32:22 | INFO     | backend.utils.model_loader:load_model:40 - Model gpt-4-turbo-preview loaded successfully
+2024-12-12 20:32:22 | INFO     | backend.app.main:startup_event:123 - Application startup complete
+2024-12-12 20:33:17 | INFO     | backend.app.main:log_requests:33 - Request: GET /api/v1/playlists/metadata Status: 200 Duration: 0.00s
+2024-12-12 20:33:21 | INFO     | backend.app.main:log_requests:33 - Request: GET /api/v1/playlists/metadata Status: 200 Duration: 0.00s
+2024-12-12 20:33:22 | INFO     | backend.app.main:log_requests:33 - Request: GET /api/v1/playlists/PLUl4u3cNGP62K2DjQLRxDNRi0z2IRWnNh/status Status: 200 Duration: 0.00s
+2024-12-12 20:33:22 | INFO     | backend.app.main:log_requests:33 - Request: POST /api/v1/playlists/process Status: 422 Duration: 0.00s
+2024-12-12 20:33:33 | INFO     | backend.app.main:log_requests:33 - Request: GET /api/v1/playlists/PLUl4u3cNGP62K2DjQLRxDNRi0z2IRWnNh/segments Status: 200 Duration: 0.00s
+2024-12-12 20:33:38 | INFO     | backend.app.main:log_requests:33 - Request: GET /api/v1/citations/PLUl4u3cNGP62K2DjQLRxDNRi0z2IRWnNh Status: 404 Duration: 0.00s
+2024-12-12 20:37:09 | INFO     | backend.app.main:shutdown_event:130 - Shutting down application...
+2024-12-12 20:37:14 | INFO     | backend.app.main:startup_event:118 - Starting application...
+2024-12-12 20:37:14 | INFO     | backend.utils.model_loader:load_model:26 - Loading model: gpt-4-turbo-preview
+2024-12-12 20:37:14 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 20:37:14 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 20:37:14 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 20:37:14 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 20:37:15 | INFO     | backend.utils.model_loader:load_model:40 - Model gpt-4-turbo-preview loaded successfully
+2024-12-12 20:37:15 | INFO     | backend.app.main:startup_event:123 - Application startup complete
+2024-12-12 20:37:33 | INFO     | backend.app.main:log_requests:33 - Request: GET /api/v1/playlists/metadata Status: 200 Duration: 0.00s
+2024-12-12 20:37:37 | INFO     | backend.app.main:log_requests:33 - Request: GET /api/v1/playlists/metadata Status: 200 Duration: 0.00s
+2024-12-12 20:37:37 | INFO     | backend.app.main:log_requests:33 - Request: GET /api/v1/playlists/PLUl4u3cNGP62K2DjQLRxDNRi0z2IRWnNh/status Status: 200 Duration: 0.00s
+2024-12-12 20:37:38 | INFO     | backend.app.main:log_requests:33 - Request: POST /api/v1/playlists/process Status: 422 Duration: 0.00s
+2024-12-12 20:37:46 | INFO     | backend.app.main:log_requests:33 - Request: GET /api/v1/playlists/PLUl4u3cNGP62K2DjQLRxDNRi0z2IRWnNh/segments Status: 200 Duration: 0.00s
+2024-12-12 20:37:50 | INFO     | backend.app.main:log_requests:33 - Request: GET /api/v1/citations/PLUl4u3cNGP62K2DjQLRxDNRi0z2IRWnNh Status: 404 Duration: 0.00s
+2024-12-12 20:37:56 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 20:37:56 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 20:37:57 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 20:37:57 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 20:40:22 | INFO     | backend.app.main:shutdown_event:130 - Shutting down application...
+2024-12-12 20:40:27 | INFO     | backend.app.main:startup_event:134 - Starting application...
+2024-12-12 20:40:27 | INFO     | backend.utils.model_loader:load_model:26 - Loading model: gpt-4-turbo-preview
+2024-12-12 20:40:27 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 20:40:27 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 20:40:28 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 20:40:28 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 20:40:28 | INFO     | backend.utils.model_loader:load_model:40 - Model gpt-4-turbo-preview loaded successfully
+2024-12-12 20:40:28 | INFO     | backend.app.main:startup_event:139 - Application startup complete
+2024-12-12 20:40:42 | INFO     | backend.app.main:shutdown_event:146 - Shutting down application...
+2024-12-12 20:40:47 | INFO     | backend.app.main:startup_event:135 - Starting application...
+2024-12-12 20:40:47 | INFO     | backend.utils.model_loader:load_model:26 - Loading model: gpt-4-turbo-preview
+2024-12-12 20:40:47 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 20:40:47 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 20:40:47 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 20:40:47 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 20:40:48 | INFO     | backend.utils.model_loader:load_model:40 - Model gpt-4-turbo-preview loaded successfully
+2024-12-12 20:40:48 | INFO     | backend.app.main:startup_event:140 - Application startup complete
+2024-12-12 20:42:17 | INFO     | backend.app.main:shutdown_event:147 - Shutting down application...
+2024-12-12 20:42:23 | INFO     | backend.app.main:startup_event:135 - Starting application...
+2024-12-12 20:42:23 | INFO     | backend.utils.model_loader:load_model:26 - Loading model: gpt-4-turbo-preview
+2024-12-12 20:42:23 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 20:42:23 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 20:42:23 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 20:42:23 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 20:42:23 | INFO     | backend.utils.model_loader:load_model:40 - Model gpt-4-turbo-preview loaded successfully
+2024-12-12 20:42:23 | INFO     | backend.app.main:startup_event:140 - Application startup complete
+2024-12-12 20:44:38 | INFO     | backend.app.main:shutdown_event:147 - Shutting down application...
+2024-12-12 20:44:43 | INFO     | backend.app.main:startup_event:135 - Starting application...
+2024-12-12 20:44:43 | INFO     | backend.utils.model_loader:load_model:26 - Loading model: gpt-4-turbo-preview
+2024-12-12 20:44:43 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 20:44:43 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 20:44:44 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 20:44:44 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 20:44:44 | INFO     | backend.utils.model_loader:load_model:40 - Model gpt-4-turbo-preview loaded successfully
+2024-12-12 20:44:44 | INFO     | backend.app.main:startup_event:140 - Application startup complete
+2024-12-12 20:44:57 | INFO     | backend.app.main:log_requests:50 - Request: GET /api/v1/playlists/metadata Status: 200 Duration: 0.00s
+2024-12-12 20:45:05 | INFO     | backend.app.main:log_requests:50 - Request: GET /api/v1/playlists/metadata Status: 200 Duration: 0.00s
+2024-12-12 20:45:05 | INFO     | backend.app.main:log_requests:50 - Request: GET /api/v1/playlists/PLUl4u3cNGP62K2DjQLRxDNRi0z2IRWnNh/status Status: 200 Duration: 0.00s
+2024-12-12 20:45:05 | INFO     | backend.app.main:log_requests:50 - Request: POST /api/v1/playlists/process Status: 422 Duration: 0.01s
+2024-12-12 20:46:39 | INFO     | backend.app.main:shutdown_event:147 - Shutting down application...
+2024-12-12 20:46:42 | INFO     | backend.app.main:startup_event:136 - Starting application...
+2024-12-12 20:46:42 | INFO     | backend.utils.model_loader:load_model:26 - Loading model: gpt-4-turbo-preview
+2024-12-12 20:46:42 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 20:46:42 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 20:46:42 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 20:46:42 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 20:46:43 | INFO     | backend.utils.model_loader:load_model:40 - Model gpt-4-turbo-preview loaded successfully
+2024-12-12 20:46:43 | INFO     | backend.app.main:startup_event:141 - Application startup complete
+2024-12-12 20:46:57 | INFO     | backend.app.main:log_requests:51 - Request: GET /api/v1/playlists/metadata Status: 200 Duration: 0.00s
+2024-12-12 20:47:01 | INFO     | backend.app.main:log_requests:51 - Request: GET /api/v1/playlists/metadata Status: 200 Duration: 0.00s
+2024-12-12 20:47:01 | INFO     | backend.app.main:log_requests:51 - Request: GET /api/v1/playlists/PLUl4u3cNGP62K2DjQLRxDNRi0z2IRWnNh/status Status: 200 Duration: 0.00s
+2024-12-12 20:47:01 | INFO     | backend.app.main:log_requests:51 - Request: POST /api/v1/playlists/process Status: 422 Duration: 0.00s
+2024-12-12 20:47:41 | INFO     | backend.app.main:log_requests:51 - Request: GET /api/v1/playlists/metadata Status: 200 Duration: 0.00s
+2024-12-12 20:47:45 | INFO     | backend.app.main:log_requests:51 - Request: GET /api/v1/playlists/metadata Status: 200 Duration: 0.00s
+2024-12-12 20:47:45 | INFO     | backend.app.main:log_requests:51 - Request: GET /api/v1/playlists/PLUl4u3cNGP62K2DjQLRxDNRi0z2IRWnNh/status Status: 200 Duration: 0.00s
+2024-12-12 20:47:46 | INFO     | backend.app.main:log_requests:51 - Request: POST /api/v1/playlists/process Status: 422 Duration: 0.00s
+2024-12-12 20:48:50 | INFO     | backend.app.main:shutdown_event:148 - Shutting down application...
+2024-12-12 20:50:20 | INFO     | backend.app.main:startup_event:136 - Starting application...
+2024-12-12 20:50:20 | INFO     | backend.utils.model_loader:load_model:26 - Loading model: gpt-4-turbo-preview
+2024-12-12 20:50:20 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 20:50:20 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 20:50:20 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 20:50:20 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 20:50:20 | INFO     | backend.utils.model_loader:load_model:40 - Model gpt-4-turbo-preview loaded successfully
+2024-12-12 20:50:20 | INFO     | backend.app.main:startup_event:141 - Application startup complete
+2024-12-12 20:50:32 | INFO     | backend.app.main:log_requests:51 - Request: GET /api/v1/playlists/metadata Status: 200 Duration: 0.00s
+2024-12-12 20:50:36 | INFO     | backend.app.main:log_requests:51 - Request: GET /api/v1/playlists/metadata Status: 200 Duration: 0.00s
+2024-12-12 20:50:36 | INFO     | backend.app.main:log_requests:51 - Request: GET /api/v1/playlists/PLUl4u3cNGP62K2DjQLRxDNRi0z2IRWnNh/status Status: 200 Duration: 0.00s
+2024-12-12 20:50:36 | INFO     | backend.app.main:log_requests:51 - Request: POST /api/v1/playlists/process Status: 422 Duration: 0.00s
+2024-12-12 21:11:48 | INFO     | backend.app.main:shutdown_event:148 - Shutting down application...
+2024-12-12 21:11:53 | INFO     | backend.app.main:startup_event:136 - Starting application...
+2024-12-12 21:11:53 | INFO     | backend.utils.model_loader:load_model:26 - Loading model: gpt-4-turbo-preview
+2024-12-12 21:11:53 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 21:11:53 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 21:11:54 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 21:11:54 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 21:11:54 | INFO     | backend.utils.model_loader:load_model:40 - Model gpt-4-turbo-preview loaded successfully
+2024-12-12 21:11:54 | INFO     | backend.app.main:startup_event:141 - Application startup complete
+2024-12-12 21:14:20 | INFO     | backend.app.main:shutdown_event:148 - Shutting down application...
+2024-12-12 21:14:24 | INFO     | backend.app.main:startup_event:136 - Starting application...
+2024-12-12 21:14:24 | INFO     | backend.utils.model_loader:load_model:26 - Loading model: gpt-4-turbo-preview
+2024-12-12 21:14:24 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 21:14:24 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 21:14:25 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 21:14:25 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 21:14:25 | INFO     | backend.utils.model_loader:load_model:40 - Model gpt-4-turbo-preview loaded successfully
+2024-12-12 21:14:25 | INFO     | backend.app.main:startup_event:141 - Application startup complete
+2024-12-12 21:14:25 | INFO     | backend.app.main:shutdown_event:148 - Shutting down application...
+2024-12-12 21:14:29 | INFO     | backend.app.main:startup_event:136 - Starting application...
+2024-12-12 21:14:29 | INFO     | backend.utils.model_loader:load_model:26 - Loading model: gpt-4-turbo-preview
+2024-12-12 21:14:29 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 21:14:29 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 21:14:29 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 21:14:29 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 21:14:30 | INFO     | backend.utils.model_loader:load_model:40 - Model gpt-4-turbo-preview loaded successfully
+2024-12-12 21:14:30 | INFO     | backend.app.main:startup_event:141 - Application startup complete
+2024-12-12 21:16:23 | INFO     | backend.app.main:shutdown_event:148 - Shutting down application...
+2024-12-12 21:16:26 | INFO     | backend.app.main:startup_event:136 - Starting application...
+2024-12-12 21:16:26 | INFO     | backend.utils.model_loader:load_model:26 - Loading model: gpt-4-turbo-preview
+2024-12-12 21:16:26 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 21:16:26 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 21:16:26 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 21:16:26 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 21:16:27 | INFO     | backend.utils.model_loader:load_model:40 - Model gpt-4-turbo-preview loaded successfully
+2024-12-12 21:16:27 | INFO     | backend.app.main:startup_event:141 - Application startup complete
+2024-12-12 21:17:17 | INFO     | backend.app.main:shutdown_event:148 - Shutting down application...
+2024-12-12 21:17:22 | INFO     | backend.app.main:startup_event:136 - Starting application...
+2024-12-12 21:17:22 | INFO     | backend.utils.model_loader:load_model:26 - Loading model: gpt-4-turbo-preview
+2024-12-12 21:17:22 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 21:17:22 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 21:17:23 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 21:17:23 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 21:17:23 | INFO     | backend.utils.model_loader:load_model:40 - Model gpt-4-turbo-preview loaded successfully
+2024-12-12 21:17:23 | INFO     | backend.app.main:startup_event:141 - Application startup complete
+2024-12-12 21:22:40 | INFO     | backend.app.main:shutdown_event:148 - Shutting down application...
+2024-12-12 21:22:44 | INFO     | backend.app.main:startup_event:136 - Starting application...
+2024-12-12 21:22:44 | INFO     | backend.utils.model_loader:load_model:26 - Loading model: gpt-4-turbo-preview
+2024-12-12 21:22:44 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 21:22:44 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 21:22:45 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 21:22:45 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 21:22:45 | INFO     | backend.utils.model_loader:load_model:40 - Model gpt-4-turbo-preview loaded successfully
+2024-12-12 21:22:45 | INFO     | backend.app.main:startup_event:141 - Application startup complete
+2024-12-12 21:25:33 | INFO     | backend.app.main:shutdown_event:148 - Shutting down application...
+2024-12-12 21:25:38 | INFO     | backend.app.main:startup_event:136 - Starting application...
+2024-12-12 21:25:38 | INFO     | backend.utils.model_loader:load_model:26 - Loading model: gpt-4-turbo-preview
+2024-12-12 21:25:38 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 21:25:38 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 21:25:39 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 21:25:39 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 21:25:40 | INFO     | backend.utils.model_loader:load_model:40 - Model gpt-4-turbo-preview loaded successfully
+2024-12-12 21:25:40 | INFO     | backend.app.main:startup_event:141 - Application startup complete
+2024-12-12 21:27:30 | INFO     | backend.app.main:shutdown_event:148 - Shutting down application...
+2024-12-12 21:27:35 | INFO     | backend.app.main:startup_event:136 - Starting application...
+2024-12-12 21:27:35 | INFO     | backend.utils.model_loader:load_model:26 - Loading model: gpt-4-turbo-preview
+2024-12-12 21:27:35 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 21:27:35 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 21:27:35 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 21:27:35 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 21:27:36 | INFO     | backend.utils.model_loader:load_model:40 - Model gpt-4-turbo-preview loaded successfully
+2024-12-12 21:27:36 | INFO     | backend.app.main:startup_event:141 - Application startup complete
+2024-12-12 21:30:07 | INFO     | backend.app.main:shutdown_event:148 - Shutting down application...
+2024-12-12 21:30:12 | INFO     | backend.app.main:startup_event:136 - Starting application...
+2024-12-12 21:30:12 | INFO     | backend.utils.model_loader:load_model:26 - Loading model: gpt-4-turbo-preview
+2024-12-12 21:30:12 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 21:30:12 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 21:30:12 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 21:30:12 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 21:30:13 | INFO     | backend.utils.model_loader:load_model:40 - Model gpt-4-turbo-preview loaded successfully
+2024-12-12 21:30:13 | INFO     | backend.app.main:startup_event:141 - Application startup complete
+2024-12-12 21:30:50 | INFO     | backend.app.main:shutdown_event:148 - Shutting down application...
+2024-12-12 21:30:56 | INFO     | backend.app.main:startup_event:136 - Starting application...
+2024-12-12 21:30:56 | INFO     | backend.utils.model_loader:load_model:26 - Loading model: gpt-4-turbo-preview
+2024-12-12 21:30:56 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 21:30:56 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 21:30:56 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 21:30:56 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 21:30:57 | INFO     | backend.utils.model_loader:load_model:40 - Model gpt-4-turbo-preview loaded successfully
+2024-12-12 21:30:57 | INFO     | backend.app.main:startup_event:141 - Application startup complete
+2024-12-12 21:32:14 | INFO     | backend.app.main:shutdown_event:148 - Shutting down application...
+2024-12-12 21:32:18 | INFO     | backend.app.main:startup_event:136 - Starting application...
+2024-12-12 21:32:18 | INFO     | backend.utils.model_loader:load_model:26 - Loading model: gpt-4-turbo-preview
+2024-12-12 21:32:18 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 21:32:18 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 21:32:18 | DEBUG    | logging:callHandlers:1706 - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-12 21:32:18 | DEBUG    | logging:callHandlers:1706 - load_verify_locations cafile='C:\\Users\\anjal\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem'
+2024-12-12 21:32:18 | INFO     | backend.utils.model_loader:load_model:40 - Model gpt-4-turbo-preview loaded successfully
+2024-12-12 21:32:18 | INFO     | backend.app.main:startup_event:141 - Application startup complete
+2024-12-12 22:16:13 | INFO     | backend.app.main:shutdown_event:148 - Shutting down application...
