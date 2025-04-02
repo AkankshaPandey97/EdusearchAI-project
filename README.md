@@ -84,7 +84,7 @@ EduSearch AI will process 5 complete MIT OCW courses and their corresponding You
 
 ### Step 1: Clone the Repository
 ```bash
-git clone https://github.com/AkankshaPandey97/EdusearchAI-project
+git clone git@github.com:AkankshaPandey97/EdusearchAI-project.git
 ```
 
 ### Step 2: Configure Environment Variables
