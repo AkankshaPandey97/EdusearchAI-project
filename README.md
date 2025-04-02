@@ -84,7 +84,7 @@ EduSearch AI will process 5 complete MIT OCW courses and their corresponding You
 
 ### Step 1: Clone the Repository
 ```bash
-git clone https://github.com/BigDataIA-Fall2024-TeamA7/final-project.git
+git clone https://github.com/AkankshaPandey97/EdusearchAI-project
 ```
 
 ### Step 2: Configure Environment Variables
@@ -107,21 +107,5 @@ docker-compose up --build
 
 ---
 
-## Submission Links
-- **Demo Video**: Included in the Codelabs document
-- **Codelabs Document**: [EduSearch AI codelabs](https://codelabs-preview.appspot.com/?file_id=https://docs.google.com/document/d/1L5xWheCcbq-f3ljnYXbzXES9jQn3k6B6qqA5KcuUzMY/edit?usp=sharing#0)
 
----
-
-## Team Contributions
-| Name                        | Contribution % | Contributions                                                                                   |
-|---------------------------- |----------------|-------------------------------------------------------------------------------------------------|
-| Sai Pranavi Jeedigunta      | 33%            | Web scraping, Materials Docling Processing, Bigquery and Pinecone db setup, Airflow Automation  |
-| Akanksha Pandey             | 33%            | RAG - Q&A feature, Topic segmentation, Summarization, Citations                                 |
-| Kalash Desai                | 33%            | Streamlit frontend, Deployment, Youtube API                                                     |
-
----
-
-## Attestation
-> We attest that we have not used any other student’s work in our assignment and abide by the policies listed in the student handbook.
 
